@@ -1,0 +1,139 @@
+.blogList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.blogitem {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+}
+
+.blogitem .blogContainer{
+    flex-grow: 1;
+}
+
+.blogaction {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-width: 350px;
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+.blogaction a {
+    flex-grow: 1;
+}
+
+.submitContainer {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 50px;
+}
+
+.submitContainer .primary-btn {
+    padding: 5px 10px;
+}
+
+.imageUp{
+    display: flex;
+    flex-direction: column;
+}
+
+.imageUp .delThumbnailBtn{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border:none;
+    border-top: 2px solid var(--accent-light);
+
+    padding: 10px;
+
+    color: var(--text-primary);
+    background-color: var(--danger-red);
+
+    font-family: "Poppins", "sans-serif", "courier new";
+    transition: .3s ease;
+}
+
+.imageUp .delThumbnailBtn:hover{
+    transform: scale(1.035);
+    background-color: var(--danger-red-hover);
+}
+
+.imageUp img {
+    margin-top: 10px;
+    max-width: 400px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.formContainer {
+    flex-grow: 1;
+}
+
+.formContainer input, .inputFile{
+    flex-grow: 1;
+    max-height: 10px;
+    border: 1px solid var(--accent-gold);
+    border-radius: 20px;
+    background-color: var(--bg-primary);
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.inputFile{
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.inputFile button{
+    min-width: 110px;
+    background-color: var(--accent-light-blue);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+
+    transition: .3s ease;
+}
+
+.inputFile button:hover{
+    cursor: pointer;
+    transform: scale(1.035);
+}
+
+#thumbUpInpt{
+    display:none;
+}
+
+.formContainer textarea {
+    flex-grow: 1;
+    border: 1px solid var(--accent-gold);
+    border-radius: 20px;
+    background-color: var(--bg-primary);
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+    min-height: 250px;
+    resize: none;
+}
+
+.danger-btn, .primary-btn, .secondary-btn{
+    text-align: center !important;
+    padding: 10px 20px !important;
+}
+
+@media (max-width: 720px){
+    .imageUp{
+        max-width: 320px;
+    }
+}

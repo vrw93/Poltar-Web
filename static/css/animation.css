@@ -1,0 +1,45 @@
+@keyframes hour-glass-spin {
+    0% {
+        transform: rotate(-2.5deg);
+    }
+    10% {
+        transform: rotate(2.5deg);
+    }
+    40%{
+        transform: rotate(178.5deg);
+    }
+    60%{
+        transform: rotate(182.5deg);
+    }
+    100%{
+        transform: rotate(358.5deg);
+    }
+}
+
+@keyframes spining {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* @Desprecated use hour-glass-spin instead */
+@keyframes spin {
+    0% {
+        transform: rotate(-2.5deg);
+    }
+    10% {
+        transform: rotate(2.5deg);
+    }
+    40%{
+        transform: rotate(178.5deg);
+    }
+    60%{
+        transform: rotate(182.5deg);
+    }
+    100%{
+        transform: rotate(358.5deg);
+    }
+}

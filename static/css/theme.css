@@ -1,0 +1,137 @@
+:root {
+    /* =========================================================
+     * DARK THEME
+     * ========================================================= */
+
+
+    /*Background*/
+    --color-bg-primary: #07111F;
+    --color-bg-secondary: #0B1E33;
+    --color-bg-card: #132A46;
+    --color-bg-header: #05101D;
+    --color-bg-footer: #05101D;
+    --color-bg-overlay: rgba(4, 17, 31, 1);
+
+
+    /*Accent*/
+    --color-accent-gold: #F0C000;
+    --color-accent-yellow: #FFD84A;
+    --color-accent-blue: #1C9DFF;
+    --color-accent-green: #22C55E;
+    --color-accent-dark-green: #117554;
+    --color-accent-orange: #cc6d00;
+
+
+    /*Neutral*/
+    --color-black: #000000;
+    --color-grey: #94A3B8;
+    --color-light: #F8FAFC;
+
+
+    /*Slider*/
+    --color-slider-thumb: rgba(255, 255, 255, 0.25);
+    --color-slider-thumb-hover: rgba(255, 255, 255, 0.45);
+
+
+    /*Text*/
+    --color-text-primary: #F5F7FA;
+    --color-text-secondary: #CBD5E1;
+    --color-text-tertiary: #94A3B8;
+
+
+    /*Semantic / Status*/
+    --color-danger: #DC2626;
+    --color-danger-hover: #A32020;
+
+
+    /* =========================================================
+     * BACKWARD COMPATIBILITY
+     *
+     * Deprecated variables.
+     * Use the new --color-* variables above instead.
+     * ========================================================= */
+
+
+    /* Background */
+
+    /** @deprecated Use --color-bg-primary */
+    --bg-primary: var(--color-bg-primary);
+
+    /** @deprecated Use --color-bg-secondary */
+    --bg-secondary: var(--color-bg-secondary);
+
+    /** @deprecated Use --color-bg-card */
+    --bg-card: var(--color-bg-card);
+
+    /** @deprecated Use --color-bg-header */
+    --bg-header: var(--color-bg-header);
+
+    /**
+     * @deprecated Use --color-bg-header or --color-bg-footer
+     * depending on the component.
+     */
+    --bg-footer-header: var(--color-bg-header);
+
+    /** @deprecated Use --color-bg-overlay */
+    --bg-overlay: var(--color-bg-overlay);
+
+
+    /* Accent */
+
+    /** @deprecated Use --color-accent-gold */
+    --accent-gold: var(--color-accent-gold);
+
+    /** @deprecated Use --color-accent-yellow */
+    --accent-yellow: var(--color-accent-yellow);
+
+    /** @deprecated Use --color-accent-blue */
+    --accent-light-blue: var(--color-accent-blue);
+
+    /** @deprecated Use --color-black */
+    --accent-dark: var(--color-black);
+
+    /** @deprecated Use --color-grey */
+    --accent-grey: var(--color-grey);
+
+    /** @deprecated Use --color-light */
+    --accent-light: var(--color-light);
+
+    /** @deprecated Use --color-accent-green */
+    --accent-green: var(--color-accent-green);
+
+    /** @deprecated Use --color-accent-dark-green */
+    --accent-dark-green: var(--color-accent-dark-green);
+
+    /** @deprecated Use --color-accent-orange */
+    --accent-orange: var(--color-accent-orange);
+
+
+    /* Slider */
+
+    /** @deprecated Use --color-slider-thumb */
+    --slider-thumb: var(--color-slider-thumb);
+
+    /** @deprecated Use --color-slider-thumb-hover */
+    --slider-thumb-hover: var(--color-slider-thumb-hover);
+
+
+    /* Text */
+
+    /** @deprecated Use --color-text-primary */
+    --text-primary: var(--color-text-primary);
+
+    /** @deprecated Use --color-text-secondary */
+    --text-secondary: var(--color-text-secondary);
+
+    /** @deprecated Use --color-text-tertiary */
+    --text-tertiary: var(--color-text-tertiary);
+
+
+    /* Semantic / Status */
+
+    /** @deprecated Use --color-danger */
+    --danger-red: var(--color-danger);
+
+    /** @deprecated Use --color-danger-hover */
+    --danger-red-hover: var(--color-danger-hover);
+}

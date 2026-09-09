@@ -1,0 +1,222 @@
+.containerH, .HContainer, .containerHImune {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:0px;
+    gap: 20px;
+}
+
+.containerV, .VContainer {
+    display: flex;
+    flex-direction: column;
+    margin:0px;
+    gap: 20px;
+}
+
+.itemPanel {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--accent-gold);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.itemPanel p {
+    text-align: left;
+    margin: 0px;
+}
+
+.itemPanel h3 {
+    margin: 0px;
+}
+
+.primaryBG {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    padding: 20px;
+}
+
+.secondaryBG {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    padding: 20px;
+}
+
+.roundContainer {
+    border-radius: 15px;
+    background-color: var(--accent-yellow);
+    padding: 10px;
+    color: var(--accent-dark);
+    width: fit-content;
+}
+
+.VH-overflow {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 10px;
+    margin: 0px;
+}
+
+.overflow-x {
+    overflow: auto;
+}
+
+/*Pagination*/
+.pageContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pageContainer .pageInput{
+    max-width: 30px;
+    border: 1px solid var(--accent-light);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 10px;
+}
+
+.pageContainer .controlBtn{
+    background: none;
+    border: none;
+    padding: 1px;
+    color: var(--accent-light);
+    transition: .3s ease;
+}
+
+.pageContainer .controlBtn.left:hover{
+    transform: 
+        translateX(-3px)
+        scale(1.03);
+    cursor: pointer;
+}
+
+.pageContainer .controlBtn.right:hover{
+    transform: 
+        translateX(3px)
+        scale(1.03);
+    cursor: pointer;
+}
+
+.pageContainer .numberBtn{
+    background: none;
+    border: none;
+    padding: 1px 10px;
+    z-index: 6;
+
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    color: var(--accent-light);
+
+    transition: .3s ease;
+}
+
+.pageContainer .numberBtn:hover{
+    transform: 
+        translateY(-3px)
+        scale(1.035);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.pageContainer .numberBtn.active{
+    anchor-name: --active;
+}
+
+.pageContainer .indicator{
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 5;
+
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    border: 1px solid var(--accent-light);
+
+    position-anchor: --active;
+    top: -2px;
+    left: anchor(--active 50%);
+    transform: translateX(-50%);
+    height: anchor-size(height);
+    width: anchor-size(width);
+
+    transition: .3s ease;
+}
+
+table {
+    padding: 10px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    table-layout: fixed;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+th, td{
+    padding: 10px;
+    margin: 0px;
+    gap: 0px;
+}
+
+th{
+    border: 1px solid var(--accent-dark);
+    width: 100%;
+}
+
+thead {
+    background-color: var(--accent-light-blue);
+}
+
+tbody {
+    background-color: var(--accent-grey);
+}
+
+@media (max-width: 768px) {
+    .containerH, .HContainer{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+}
+
+/*.HContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin:0px;
+}
+
+.VContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin:0px;
+}
+
+.itemPanel {
+    flex-grow: 1;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--accent-gold);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.itemPanel p {
+    text-align: left;
+    margin: 0px;
+}
+
+.itemPanel h3 {
+    margin: 0px;
+}*/

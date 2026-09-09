@@ -1,0 +1,23 @@
+.markdown {
+    margin-top: 40px;
+}
+
+.markdown h2 {
+    text-align: left;
+}
+
+.markdown h3 {
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.markdown h4 {
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.markdown a{
+    color: var(--text-secondary);
+    text-decoration: underline !important;
+    font-weight: bold !important;
+}

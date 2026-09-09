@@ -1,0 +1,32 @@
+.galleryCardContainer {
+    display:flex;
+    flex-direction: column;
+}
+
+.galleryActionButton {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    min-height: 30px;
+    max-width: 350px;
+    gap: 10px;
+}
+
+.galleryActionButton .secondary-btn {
+    display: unset;
+    font-size: 1.2rem;
+    padding: 5px 15px !important;
+    flex-grow: 1;
+}
+
+.galleryActionButton .danger-btn {
+    font-size: 1.2rem;
+    padding: 5px 15px !important;
+    flex-grow: 1;
+}
+
+@media (max-width: 720px){
+    .galleryCardContainer .galleryItem{
+        min-width: 300px;
+    }
+}

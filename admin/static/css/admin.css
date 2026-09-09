@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+}
+
+.loginForm input {
+    border: 1px solid var(--accent-light-blue);
+    width: 90%;
+    font-size: 1.1rem;
+    background-color: var(--bg-primary);
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 20px;
+}

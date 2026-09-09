@@ -1,0 +1,24 @@
+/*conflict dialog*/
+
+.participantItem{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: var(--accent-grey);
+}
+
+.participantList{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0px;
+}
+
+/*detail Dialog*/
+/*.dataDetail{
+    display: grid;
+    grid-template-columns: 150px 10px auto;
+    row-gap: 6px;
+}*/

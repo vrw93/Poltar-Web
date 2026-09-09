@@ -1,0 +1,489 @@
+p {
+    font-family: "Poppins", "sans-serif", "courier new";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#mainPageBody {
+    background-image: url('/static/image/BG1.webp');
+    background-color: var(--bg-primary);
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: var(--text-primary);
+    font-family: "Poppins", "Arial", "arial", "sans-serif", "courier new";
+    font-size: 1rem;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+Body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Poppins", "Arial", "arial", "sans-serif", "courier new";
+    font-size: 1rem;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+/* Sliders */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--slider-thumb);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--slider-thumb-hover);
+}
+
+/* Footers */
+.footers {
+    margin-top: 50px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    background-color: var(--bg-footer-header);
+    border-top: 2px solid var(--accent-gold);
+}
+
+.footers h2 {
+    margin: 0px;
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.footers .nameCardF {
+    display: flex;
+    flex-direction: column;
+}
+
+.footers .nameCardF h2 {
+    font-size: 1.8rem;
+    margin: 0px;
+}
+
+.footers .nameCardF h3 {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin: 0px;
+    text-align: left;
+}
+
+.footers .nameCardF small {
+    margin-top: 20px;
+    color: var(--text-tertiary)
+}
+
+.footers h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.footers .navbarF {
+    display: flex;
+    flex-direction: column;
+}
+
+.footers .navbarF li {
+    list-style-type: none;
+    margin-top: 5px;
+    position: relative;
+}
+
+.footers .navbarF a {
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+.footers .nameCardF p {
+    color: var(--text-secondary)
+}
+
+/* Header */
+.Headerstick{
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    height: 30px;
+    padding: 20px;
+    background: var(--bg-footer-header);
+    border-bottom: 2px solid var(--accent-gold);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Headerstick h2 {
+    margin: 0px;
+    font-size: 1.4rem;
+}
+
+.Headerstick img {
+    max-width: 50px;
+    margin: 0px;
+}
+
+.Headerstick .leftSect {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Headerstick .rightSect {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: right;
+}
+
+.Headerstick .rightSect ul {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    list-style-type: none;
+    gap: 5px;
+}
+
+
+.Headerstick .rightSect ul li{
+    position: relative;
+    margin: 0px 10px;
+}
+
+.Headerstick .rightSect .humburger{
+    display: none;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.Headerstick .rightSect .humburger:hover{
+    color: var(--accent-gold);
+}
+
+.navlink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent-gold);
+    transition: width 0.3s;
+}
+
+.navlink:hover::after{
+    width: 100%;
+}
+
+.userBtn{
+    font-family: "Poppins", "sans-serif", "courier new";
+    background: var(--bg-footer-header);
+    outline: none;
+    color: var(--text-primary);
+    border: 2px solid var(--accent-gold);
+    width: 40px;
+    height: 40px;
+    margin:0px;
+    border-radius: 50px;
+}
+
+.userMenu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    top: 60px;
+    right: 0px;
+    width: 150px;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--accent-gold);
+    
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-14px);
+    transition: .3s ease;
+}
+
+.userMenu.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.userMenu ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.userMenu ul li{
+    position: relative;
+    cursor: pointer;
+}
+
+/* Text/Typography */
+
+h1 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1;
+    margin-top: 0;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.tagline {
+    color: var(--accent-yellow);
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-top: 0;
+}
+
+.description{
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Buttons */
+.primary-btn:hover {
+    cursor: pointer;
+    background-color: var(--accent-yellow);
+    color: var(--accent-dark);
+    transform: scale(1.03);
+}
+
+.primary-btn{
+    font-family: "Poppins", "sans-serif", "courier new";
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: var(--accent-gold);
+    color: var(--accent-dark);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+    cursor: pointer;
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    transform: scale(1.03);
+}
+
+.secondary-btn {
+    font-family: "Poppins", "sans-serif", "courier new";
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid var(--accent-light);
+    color: var(--accent-light);
+    padding: 15px 25px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.teritary-btn {
+    font-family: "Poppins", "sans-serif", "courier new";
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: var(--accent-light-blue);
+    color: var(--accent-light);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.teritary-btn:hover {
+    cursor: pointer;
+    background-color: var(--accent-grey);
+    transform: scale(1.03);
+}
+
+.danger-btn {
+    font-family: "Poppins", "sans-serif", "courier new";
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: var(--danger-red);
+    color: var(--accent-light);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    
+    transition: .3s ease;
+}
+
+.danger-btn:hover {
+    cursor: pointer;
+    background-color: var(--danger-red-hover);
+    transform: scale(1.1);
+}
+
+.danger-btn:disabled{
+    cursor: not-allowed;
+    background-color: var(--color-danger-hover);
+}
+
+.edit-btn{
+    background: none;
+}
+
+.edit-btn:hover{
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.containerButtons:hover{
+    transform: 
+        translateY(-20px)
+        scale(1.1);
+}
+
+.containerButtons {
+    max-width: 250px;
+    padding: 20px;
+    border: 2px solid var(--accent-gold);
+    background-color: var(--bg-card);
+    border-radius: 25px;
+    transition: 0.5s ease;
+}
+
+.containerButtons h3 {
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+.containerButtons p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/*anchor location*/
+.tf-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%); 
+}
+
+.tr-anchor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%); 
+}
+
+/* etc */
+.hidden { 
+    display: none !important;
+}
+
+.popup {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 20px;
+    color: white;
+}
+
+.dataDetail{
+    display: grid;
+    grid-template-columns: 150px 10px auto;
+    row-gap: 6px;
+}
+
+/*responsive*/
+@media (max-width: 768px) {
+    #mainPageBody{
+        background-size: 300%;
+    }
+    .containerButtons{
+        height: 130px;
+    }
+    .containerButtons p{
+        display: none !important;
+    }
+    .mConBtn{
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footers{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .Headerstick .rightSect .humburger{
+        display: flex;
+    }
+
+    .Headerstick .rightSect ul{
+        flex-direction:column;
+        position:absolute;
+
+        top:50px;
+        right:0px;
+        padding: 10px;
+        gap: 10px;
+        border-radius: 15px;
+        border: 1px solid var(--accent-gold);
+        text-align: left;
+
+        width: 150px;
+        opacity:0;
+        height:fit-content;
+        visibility:hidden;
+
+        transform:translateY(-15px);
+
+        transition:
+            opacity .3s ease,
+            transform .3s ease,
+            visibility .3s;
+        
+        overflow: hidden;
+        background-color: var(--bg-secondary);
+    }
+
+    .Headerstick .rightSect ul.active{
+        opacity:1;
+        visibility:visible;
+
+        transform:translateY(0);
+    }
+}

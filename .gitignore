@@ -1,0 +1,9 @@
+# Database Connection
+/logic/database.php
+
+# File Uploads
+/uploads/
+
+# Logs
+*.log
+*.LOG

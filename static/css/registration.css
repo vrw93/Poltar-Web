@@ -1,0 +1,107 @@
+.conflict-btn{
+    background: none;
+}
+
+.conflict-btn:hover{
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.detail-btn{
+    background: none;
+}
+
+.detail-btn:hover{
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.selfNameClass{
+    background-color: var(--accent-gold);
+    color: var(--accent-dark);
+}
+
+.tableKelas{
+    background-color: var(--accent-light-blue);
+    padding: 1px 5px;
+    border-radius: 10px;
+    color: var(--accent-light);
+}
+
+.tableSekor{
+    background-color: var(--accent-dark-green);
+    padding: 1px 5px;
+    color: var(--accent-light);
+    border-radius: 10px;
+}
+
+.tableStatus.accepted{
+    background-color: var(--accent-green);
+    border-color: var(--accent-light);
+    color: var(--accent-light);
+}
+
+.tableStatus.displaced, .tableStatus.partialy{
+    background-color: var(--accent-orange);
+    border-color: var(--accent-light);
+    color: var(--accent-light);
+}
+
+.tableStatus.reject, .tableStatus.rejected, .tableStatus.cancel{
+    background-color: var(--danger-red);
+    border-color: var(--accent-light);
+    color: var(--accent-light);
+}
+
+.tableStatus{
+    border: 1px solid var(--accent-light);
+    border-radius: 10px;
+    padding: 1px 5px;
+}
+
+form h3{
+    text-align: left !important;
+    margin-bottom: 10px !important;
+}
+
+form input{
+    padding: 10px;
+    margin: 0px;
+    border: 1px solid var(--accent-yellow);
+    border-radius: 15px;
+    background-color: var(--bg-secondary);
+    color: var(--accent-light);
+}
+
+form select {
+    padding: 5px 15px;
+    margin: 0px;
+    border: 1px solid var(--accent-yellow);
+    border-radius: 10px;
+    background-color: var(--bg-secondary);
+    color: var(--accent-light);
+    flex-grow: unset;
+    width: fit-content;
+}
+
+form textarea {
+    background-color: var(--bg-secondary);
+    color: var(--accent-light);
+    padding: 10px;
+    border: 1px solid var(--accent-yellow);
+    border-radius: 15px;
+    min-height: 150px;
+}
+
+.containerH.reg{
+    transform: translateX(25%);
+}
+
+@media (max-width: 768px) {
+    .THdesktop{
+        display: none;
+    }
+    .containerH.reg{
+        transform: translateX(0px);
+    }
+}

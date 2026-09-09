@@ -1,0 +1,11 @@
+RewriteEngine On
+
+RewriteRule ^blogs$ blogs.php [L]
+RewriteRule ^Post$ blogPost.php [L]
+RewriteRule ^logout$ logic/auth/logout.php [L]
+RewriteRule ^gallery$ gallery.php [L]
+RewriteRule ^register$ register.php [L]
+RewriteRule ^login$ login.php [L]
+
+php_value date.timezone Asia/Jakarta
+php_value display_errors On
