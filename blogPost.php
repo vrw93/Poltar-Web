@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 $currentPage = "";
 include "logic/database.php";
 include "logic/Blogs/getBlogPosts.php";
@@ -20,9 +18,12 @@ foreach ($blogPosts as $post){
 }
 
 if ($currentPost == null){
-    die("Blogs Not Found");
+    $type = '404';
+    include __DIR__ . '/errorpage.php';
+    exit;
 }
 
+session_start();
 $mardownParser = new markdownParser();
 
 $content = $mardownParser->Parse($currentPost['content']);

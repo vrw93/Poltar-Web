@@ -1,10 +1,10 @@
 <?php
-session_start();
+#session_start();
 
 $currentPage = '';
 
-include 'data/menudb.php';
-include 'data/errorPageDB.php';
+require_once __DIR__ . '/data/menudb.php';
+require_once __DIR__ . '/data/errorPageDB.php';
 
 $data = $datas[$type ?? 'unknown'];
 ?>
