@@ -6,6 +6,17 @@
 /logic/rateLimiter.php
 /logic/updateServerStatusByName.php
 /logic/registration/calculateStatus.php
+/logic/registration/getChoicesData.php
+/logic/registration/getClass.php
+/logic/registration/getDetailPendaftaranDataByPendaftaranId.php
+/logic/registration/getJabatan.php
+/logic/registration/components/
+/logic/registration/admin/
+/logic/Gallery/
+/logic/Blogs/
+/logic/auth/login.php
+/logic/account/
+/logic/registration/getUserDataByUserId.php
 
 # File Uploads
 /uploads/
