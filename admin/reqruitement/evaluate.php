@@ -1,15 +1,7 @@
 <?php
 session_start();
 
-if (isset($_SESSION['user_id'])){
-    if($_SESSION['role_id'] !== 1){
-        header("Location: /login?url=/admin/reqruitement/evaluate");
-        exit();
-    }
-}else if(!isset($_SESSION['user_id'])){
-    header("Location: /login?url=/admin/reqruitement/evaluate");
-    exit();
-}
+require_once __DIR__ . '/../authHelper.php';
 
 $currentPage = "daftar panel";
 require_once __DIR__ . "/../../data/menudb.php";

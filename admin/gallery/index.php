@@ -1,15 +1,7 @@
 <?php 
 session_start();
 
-if (isset($_SESSION['user_id'])){
-    if($_SESSION['role_id'] !== 1){
-        header("Location: /login?url=/admin/gallery");
-        exit();
-    }
-}else if(!isset($_SESSION['user_id'])){
-    header("Location: /login?url=/admin/gallery");
-    exit();
-}
+require_once __DIR__ . '/../authHelper.php';
 
 $currentPage = "gallery panel";
 require_once __DIR__ . "/../../data/adminmenudb.php";
