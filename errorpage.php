@@ -6,7 +6,13 @@ $currentPage = '';
 require_once __DIR__ . '/data/menudb.php';
 require_once __DIR__ . '/data/errorPageDB.php';
 
-$data = $datas[$type ?? 'unknown'];
+$httpCode = $type ?? $_SERVER['ERROR_CODE'];
+
+if(isset($datas[$httpCode])){
+    $data = $datas[$httpCode];
+}else{
+    $data = $datas['unknown'];
+}
 ?>
 
 <!DOCTYPE html>
