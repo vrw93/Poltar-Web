@@ -5,6 +5,7 @@
 /logic/getStatusNameByCode.php
 /logic/rateLimiter.php
 /logic/updateServerStatusByName.php
+/logic/registration/calculateStatus.php
 
 # File Uploads
 /uploads/
