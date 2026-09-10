@@ -17,6 +17,7 @@
 /logic/auth/login.php
 /logic/account/
 /logic/registration/getUserDataByUserId.php
+/admin/gallery/deleteGallery.php
 
 # File Uploads
 /uploads/
