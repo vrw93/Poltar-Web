@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
     $token = $_POST['cf-turnstile-response'] ?? '';
 
     $data = [
-        'secret' => 'Your Secret Key',
+        'secret' => 'Your Secret',
         'response' => $token,
     ];
 
