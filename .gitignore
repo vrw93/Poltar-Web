@@ -3,6 +3,7 @@
 /logic/getDataFromDB.php
 /logic/getServerStatusByName.php
 /logic/getStatusNameByCode.php
+/logic/rateLimiter.php
 
 # File Uploads
 /uploads/
