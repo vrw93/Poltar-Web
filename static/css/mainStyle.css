@@ -247,6 +247,7 @@ Body {
 .userMenu ul li{
     position: relative;
     cursor: pointer;
+    margin-bottom: 3px;
 }
 
 /* Text/Typography */

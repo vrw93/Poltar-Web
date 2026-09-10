@@ -34,7 +34,7 @@
     </div>
     <?php if(isset($_SESSION['user_id'])): ?>
     <div class="userMenu" id="userMenu">
-        <p style="margin:0px; gap: 10px"><i class="fa-solid fa-user"></i> <?=$_SESSION['username']?></p>
+        <p style="margin:0px;border-bottom:2px solid var(--color-accent-gold)"><i class="fa-solid fa-user"></i> <?=$_SESSION['username']?></p>
         <ul>
             <?php 
                 if(isset($_SESSION['role_id'])): 
