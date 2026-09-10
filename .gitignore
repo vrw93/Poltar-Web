@@ -1,6 +1,8 @@
 # Database Connection
 /logic/database.php
 /logic/getDataFromDB.php
+/logic/getServerStatusByName.php
+/logic/getStatusNameByCode.php
 
 # File Uploads
 /uploads/
