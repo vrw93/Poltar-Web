@@ -1,4 +1,9 @@
 <?php
+#If You Want To Use This, Remove These And Rename The File To login.php
+Header("Location: /login");
+exit();
+#======================================================================
+
 $currentPage = "";
 $url = $_GET['url'] ?? ".";
 

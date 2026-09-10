@@ -25,3 +25,7 @@
 # Logs
 *.log
 *.LOG
+
+
+login.php
+register.php

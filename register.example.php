@@ -1,4 +1,9 @@
 <?php
+#If You Want To Use This, Remove These And Rename The File To register.php
+Header("Location: /register");
+exit();
+#======================================================================
+
 session_start();
 include "data/menudb.php";
 include "logic/account/createAccount.php";
