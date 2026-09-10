@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_SESSION['user_id'])){
     if($_SESSION['role_id'] !== 1){
-        header("Location: ../login");
+        header("Location: /login?url=/admin");
         exit();
     }
 }else if(!isset($_SESSION['user_id'])){

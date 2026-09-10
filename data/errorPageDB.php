@@ -8,6 +8,12 @@ $datas = [
         'title' => 'Pendaftaran Belum Dibuka',
         'description' => 'jika Anda Merasa Pendaftaran Sudah Seharusnya Dibuka Silahkan Hubungi Admisnistrator'
     ],
+    'no_admin' => [
+        'title' => 'Akses Ditolak',
+        'description' => 'Silahkan Kembali Ke Halaman Utama'
+    ],
+
+    //Http Error
     '404' => [
         'title' => '404',
         'description' => 'Halaman Tidak Ditemukan<br>Silahkan cek ulang tautan anda atau kembali ke halaman utama'
