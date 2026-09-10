@@ -30,7 +30,7 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 - [ ] Admin
 - [ ] Recruitment System
 
-## Road Map
+## Road Map 🗺
 > [!NOTE]
 > This Prone To Change
 
@@ -42,6 +42,6 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 6. Add Password Complexsity Check
 7. Add Site Setting
 
-## License 
+## License 📑
 This Project Is Under MIT LICENSE [See More](LICENSE).<br>
 Copy Right By VrwDev © 2026
