@@ -30,7 +30,18 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 - [ ] Admin
 - [ ] Recruitment System
 
-## License
+## Road Map
+> [!NOTE]
+> This Prone To Change
 
-> [!CAUTION]
-> TBA
+1. Add Google Auth
+2. Add Blog Comment
+3. Add Theme
+4. Add Role Feature
+5. Add Blog Author And View Count
+6. Add Password Complexsity Check
+7. Add Site Setting
+
+## License 
+This Project Is Under MIT LICENSE [See More](LICENSE).<br>
+Copy Right By VrwDev © 2026
