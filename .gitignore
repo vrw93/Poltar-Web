@@ -1,5 +1,6 @@
 # Database Connection
 /logic/database.php
+/logic/getDataFromDB.php
 
 # File Uploads
 /uploads/
