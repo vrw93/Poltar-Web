@@ -4,7 +4,17 @@ session_start();
 require_once __DIR__ . '/../authHelper.php';
 
 $currentPage = "";
+require_once __DIR__ . "/../../logic/database.php";
 require_once __DIR__ . "/../../data/adminmenudb.php";
+require_once __DIR__ . "/../../logic/getDataFromDB.php";
+
+$getDB = new getDbData();
+
+#pagination
+$limit = 1;
+$usrCount = 10;
+
+$usersData = $getDB->getUsersData($database);
 ?>
 
 <!DOCTYPE html>
@@ -37,32 +47,51 @@ require_once __DIR__ . "/../../data/adminmenudb.php";
                 <thead>
                     <tr>
                         <th style="width: 30px;">No</th>
-                        <th>Nama Pengguna</th>
-                        <th>Email</th>
-                        <th style="width: 150px">Role</th>
-                        <th style="width: 150px">Status</th>
+                        <th>
+                            <i class="fa-solid fa-id-card"></i>
+                            Nama Pengguna
+                        </th>
+                        <th>
+                            <i class="fa-solid fa-envelope"></i>
+                            Email
+                        </th>
+                        <th style="width: 150px">
+                            <i class="fa-solid fa-user-tie"></i>
+                            Role
+                        </th>
+                        <th style="width: 150px">
+                            <i class="fa-solid fa-user-tag"></i>
+                            Status
+                        </th>
                         <th style="width: 80px"></th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                    $index = 1;
+                    foreach($usersData as $data):
+                    ?>
                     <tr>
-                        <td style="text-align: center;">1</td>
-                        <td>[username]</td>
-                        <td>[email]</td>
-                        <td>[role]</td>
-                        <td>[status]</td>
+                        <td style="text-align: center;">
+                            <?=$index++?>
+                        </td>
+                        <td><?=$data['username'] ?></td>
+                        <td><?=$data['email'] ?></td>
+                        <td><?=$data['roleName'] ?></td>
+                        <td><?=$data['statusName'] ?></td>
                         <td style="text-align: right;gap: 15px">
-                            <a>
+                            <a class="no-bg-btn detail">
                                 <i class="fa-solid fa-clipboard-list"></i>
                             </a>
-                            <a>
+                            <a class="no-bg-btn edit">
                                 <i class="fa-solid fa-user-gear"></i>
                             </a>
-                            <a>
-                                <i class="fa-solid fa-user-pen"></i>
+                            <a class="no-bg-btn role">
+                                <i class="fa-solid fa-user-tie"></i>
                             </a>
                         </td>
                     </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
             </div>

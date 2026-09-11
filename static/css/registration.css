@@ -1,18 +1,8 @@
-.conflict-btn{
+.no-bg-btn{
     background: none;
 }
 
-.conflict-btn:hover{
-    cursor: pointer;
-    color: var(--text-secondary);
-}
-
-.detail-btn{
-    background: none;
-}
-
-.detail-btn:hover{
-    cursor: pointer;
+.no-bg-btn:hover{
     color: var(--text-secondary);
 }
 
@@ -104,4 +94,26 @@ form textarea {
     .containerH.reg{
         transform: translateX(0px);
     }
+}
+
+/* @desprecated */
+.conflict-btn{
+    background: none;
+}
+
+/* @desprecated */
+.conflict-btn:hover{
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+/* @desprecated */
+.detail-btn{
+    background: none;
+}
+
+/* @desprecated */
+.detail-btn:hover{
+    cursor: pointer;
+    color: var(--text-secondary);
 }
