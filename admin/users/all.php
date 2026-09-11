@@ -6,21 +6,30 @@ require_once __DIR__ . '/../authHelper.php';
 $currentPage = "";
 require_once __DIR__ . "/../../logic/database.php";
 require_once __DIR__ . "/../../data/adminmenudb.php";
+require_once __DIR__ . "/../../data/iconData.php";
 require_once __DIR__ . "/../../logic/getDataFromDB.php";
 
 $getDB = new getDbData();
 
 #pagination
-$limit = 1;
-$usrCount = 10;
+$limit = 16;
+$usrCount = $getDB->getGeneralCount($database, 'Users');
 
-$usersData = $getDB->getUsersData($database);
+$usersData = $getDB->getUsersData($database, $limit);
+
+function getIconByCode($code, $icons){
+    if(isset($icons[$code])){
+        return $icons[$code];
+    }else{
+        return '';
+    }
+}
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dashboard | Admin</title>
+        <title>Semua Pengguna | Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf_token" content="<?=$_SESSION['csrf_token'] ?? '' ?>">
         <link rel="stylesheet" href="/static/css/mainStyle.css">
@@ -77,8 +86,22 @@ $usersData = $getDB->getUsersData($database);
                         </td>
                         <td><?=$data['username'] ?></td>
                         <td><?=$data['email'] ?></td>
-                        <td><?=$data['roleName'] ?></td>
-                        <td><?=$data['statusName'] ?></td>
+                        <td>
+                            <?=getIconByCode(
+                                'usr-role-' . $data['roleCode'],
+                                $icons
+                            )
+                            ?>
+                            <?=$data['roleName'] ?? 'N/a'?>
+                        </td>
+                        <td>
+                            <?=getIconByCode(
+                                'usr-' . ($data['statusCode'] ?? 'unverified'),
+                                $icons
+                            )
+                            ?>
+                            <?=$data['statusName'] ?? 'Tidak Daftar'?>
+                        </td>
                         <td style="text-align: right;gap: 15px">
                             <a class="no-bg-btn detail">
                                 <i class="fa-solid fa-clipboard-list"></i>
@@ -95,10 +118,20 @@ $usersData = $getDB->getUsersData($database);
                 </tbody>
             </table>
             </div>
+            <?php
+                $pageId = 'allUserPage';
+                $pageCount = ceil(($usrCount/$limit));
+                include __DIR__ . "/../../components/pagination.php";
+                unset($pageCount);
+                unset($pageId);
+            ?>
         </div>
 
         <?php include __DIR__ . "/../../components/footer.php"; ?>
 
         <script src="https://kit.fontawesome.com/c2c5e95263.js" defer crossorigin="anonymous"></script>
+        <script src="/api/js/apiHelper.js" defer></script>
+        
+        <script type="module" src="/static/js/pagination/main.js" defer></script>
     </body>
 </html>
