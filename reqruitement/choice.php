@@ -3,14 +3,14 @@ $currentPage = "daftar";
 session_start();
 if(!isset($_SESSION['user_id'])){ header("Location: /login?url=/reqruitement"); exit(); }
 
-include "../data/menudb.php";
-include "../logic/registration/getJabatan.php";
-include "../logic/registration/saveChoice.php";
-include "../logic/registration/getChoicesData.php";
-include "../logic/registration/components/getPendaftaranIdByuserId.php";
-include "../logic/registration/components/getPendaftaranDataByUserId.php";
-include "../logic/database.php";
-include __DIR__ . "/../logic/getServerStatusByName.php";
+require_once __DIR__ . "/../data/menudb.php";
+require_once __DIR__ . "/../logic/registration/getJabatan.php";
+require_once __DIR__ . "/../logic/registration/saveChoice.php";
+require_once __DIR__ . "/../logic/registration/getChoicesData.php";
+require_once __DIR__ . "/../logic/registration/components/getPendaftaranIdByuserId.php";
+require_once __DIR__ . "/../logic/registration/components/getPendaftaranDataByUserId.php";
+require_once __DIR__ . "/../logic/database.php";
+require_once __DIR__ . "/../logic/getServerStatusByName.php";
 $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
 if($reqruitementStatus['statusCode'] == 'reg_closed'){
     $type = 'reg_closed';
@@ -44,7 +44,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     if(count($arrayId) !== count(array_unique($arrayId)))
         die('Tidak boleh memilih jabatan yang sama lebih dari sekali');
 
-    saveChoice($database, $Choices, $_POST['keahlian'], $userId);
+    $keahlian = htmlspecialchars($_POST['keahlian']);
+
+    saveChoice($database, $Choices, $keahlian, $userId);
     header("Location: /reqruitement");
 }
 ?>
@@ -63,7 +65,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <body>
         <h1 style="text-align:center;">DAFTAR KEANGGOTAAN</h1>
         <h2 style="color:var(--accent-gold)">SMK NEGERI 1 GIRITONTRO</h2>
-        <?php include "../components/navbar.php"; ?>
+        <?php include __DIR__ . "/../components/navbar.php"; ?>
 
         <div class="containerV" style="margin:30px;">
             <h2 style="margin:0px;">Pemilihan Keanggotaan</h2>
@@ -109,7 +111,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             </form>
         </div>
 
-        <?php include "../components/footer.php"; ?>
+        <?php include __DIR__ . "/../components/footer.php"; ?>
         <script src="https://kit.fontawesome.com/c2c5e95263.js" crossorigin="anonymous"></script>
         <script src="/static/js/reqruitementQoutaUpdate.js"></script>
         <script src="/static/js/removeChoiceReqruitement.js"></script>
