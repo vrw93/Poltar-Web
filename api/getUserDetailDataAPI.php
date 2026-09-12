@@ -20,7 +20,7 @@ if(isset($data['userId'])){
         $userId = (int)$data['userId'];
 
         try{
-            $userDetailData = getUserDetailData($database, $userId);
+            $userDetailData = $getDB->getUserDetailData($database, $userId);
             
             $result = true;
             $msg = "Berhasil Mengambil Data Dari Database";
