@@ -209,7 +209,10 @@ $unverifiedData = $buildEvaluateData->getUnverifiedData($database, $limit);
                 <i class="fa-solid fa-xmark"></i>
             </a>
             <div class="itemPanel">
-                <h2>Data Siswa</h2>
+                <h2>
+                    Data Siswa
+                    <hr>
+                </h2>
                 <div class="dataDetail">
                     <span>Nama Lengkap</span><span>:</span><span>[name]</span>
                     <span>Kelas</span><span>:</span><span>[kelas]</span>

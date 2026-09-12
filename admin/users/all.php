@@ -12,7 +12,7 @@ require_once __DIR__ . "/../../logic/getDataFromDB.php";
 $getDB = new getDbData();
 
 #pagination
-$limit = 16;
+$limit = 10;
 $usrCount = $getDB->getGeneralCount($database, 'Users');
 
 $usersData = $getDB->getUsersData($database, $limit);
@@ -34,6 +34,7 @@ function getIconByCode($code, $icons){
         <meta name="csrf_token" content="<?=$_SESSION['csrf_token'] ?? '' ?>">
         <link rel="stylesheet" href="/static/css/mainStyle.css">
         <link rel="stylesheet" href="/static/css/theme.css">
+        <link rel="stylesheet" href="/static/css/animation.css">
         <link rel="stylesheet" href="/static/css/registration.css">
         <link rel="stylesheet" href="/static/css/layout.css">
         <link rel="icon" type="image/x-icon" href="/static/image/poltarFav.ico">
@@ -103,7 +104,8 @@ function getIconByCode($code, $icons){
                             <?=$data['statusName'] ?? 'Tidak Daftar'?>
                         </td>
                         <td style="text-align: right;gap: 15px">
-                            <a class="no-bg-btn detail">
+                            <a class="no-bg-btn detail" 
+                            data-user-id="<?=$data['id']?>">
                                 <i class="fa-solid fa-clipboard-list"></i>
                             </a>
                             <a class="no-bg-btn edit">
@@ -127,10 +129,61 @@ function getIconByCode($code, $icons){
             ?>
         </div>
 
+        <dialog id="userDetailDialog" class="popup">
+            <div class="VContainer" style="padding:10px">
+                <div class="tr-anchor" style="top:25px; right:25px;">
+                    <button class="secondary-btn detail" style="padding: 2px 4px">
+                        <i class="fa-solid fa-xmark fa-lg"></i>
+                    </button>
+                </div>
+                <div class="itemPanel">
+                    <h2 style="padding-bottom: 5px; margin-bottom:3px;
+                    border-bottom:2px solid var(--color-light)">
+                        Detail Pengguna
+                    </h2>
+                    <p style="color: var(--text-secondary);">
+                        <i class="fa-solid fa-user"></i>
+                        <b>Detail Akun</b>
+                    </p>
+                    <div class="dataDetail">
+                        <span>Nama Pengguna</span><span>:</span><span>[username]</span>
+                        <span>Email</span><span>:</span><span>[email]</span>
+                        <span>Role</span><span>:</span><span>[role]</span>
+                        <span>Dibuat Pada</span><span>:</span><span>[createdAt]</span>
+                    </div>
+
+                    <hr style="width: 100%">
+                    
+                    <p style="color: var(--text-secondary);">
+                        <i class="fa-solid fa-address-card"></i>
+                        <b>Detail Biodata</b>
+                    </p>
+                    <div class="dataDetail">
+                        <span>Nama Lengkap</span><span>:</span><span>[name]</span>
+                        <span>No Absen</span><span>:</span><span>[no_absen]</span>
+                        <span>Kelas</span><span>:</span><span>[kelas]</span>
+                    </div>
+                    
+                    <hr style="width: 100%">
+                    
+                    <p style="color: var(--text-secondary);">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <b>Detail Pendaftaran</b>
+                    </p>
+                    <div class="dataDetail">
+                        <span>Mendaftar Pada</span><span>:</span><span>[pendaftaranCreationTime]</span>
+                        <span>Sekor</span><span>:</span><span>[sekor]</span>
+                        <span>Verifikasi</span><span>:</span><span>[statusName]</span>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+
         <?php include __DIR__ . "/../../components/footer.php"; ?>
 
         <script src="https://kit.fontawesome.com/c2c5e95263.js" defer crossorigin="anonymous"></script>
         <script src="/api/js/apiHelper.js" defer></script>
+        <script src="/static/js/admin/getUsersDetail.js" defer></script>
         
         <script type="module" src="/static/js/pagination/main.js" defer></script>
     </body>
