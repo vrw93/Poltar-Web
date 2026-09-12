@@ -19,7 +19,7 @@ if(isset($data['name']) && isset($data['noAbsen'])
     if(is_string($data['name']) && is_numeric($data['noAbsen']) 
         && is_numeric($data['kelasId']) && is_numeric($data['userId'])
     ){
-        $userId = (int)$userId;    
+        $userId = (int)$data['userId'];    
 
         #Html Escape
         $name = htmlspecialchars((string)$data['name'], ENT_QUOTES, 'UTF-8');

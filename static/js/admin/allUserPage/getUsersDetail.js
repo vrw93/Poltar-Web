@@ -11,7 +11,6 @@ async function detailClickEventHandler(userId){
 
     const thisRequestId = ++requestId;
     const data = await checkDetailDataAvaibility(userId);
-    console.log(data);
 
     if(thisRequestId !== requestId) return;
 

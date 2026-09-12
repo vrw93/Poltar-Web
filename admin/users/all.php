@@ -8,8 +8,10 @@ require_once __DIR__ . "/../../logic/database.php";
 require_once __DIR__ . "/../../data/adminmenudb.php";
 require_once __DIR__ . "/../../data/iconData.php";
 require_once __DIR__ . "/../../logic/getDataFromDB.php";
+require_once __DIR__ . "/../../logic/registration/getClass.php";
 
 $getDB = new getDbData();
+$class = getClass($database);
 
 #pagination
 $limit = 10;
@@ -181,12 +183,64 @@ function getIconByCode($code, $icons){
             </div>
         </dialog>
 
+        <dialog id="editBiodataDialog" class="popup"
+        data-user-id="">
+            <div class="VContainer">
+                <div class="tr-anchor" style="top:25px; right:25px;">
+                    <button class="secondary-btn edit" style="padding: 2px 4px">
+                        <i class="fa-solid fa-xmark fa-lg"></i>
+                    </button>
+                </div>
+                <div class="itemPanel">
+                    <h2 style="padding-bottom: 5px; margin-bottom:3px;
+                    border-bottom:2px solid var(--color-light)">
+                        Edit Biodata Pengguna
+                    </h2>
+                    <p style="color: var(--text-secondary);">
+                        <i class="fa-solid fa-address-card"></i>
+                        <b>Detail Biodata</b>
+                    </p>
+                    <form id="editBiodataForm" style="display:flex; flex-direction: column">
+                        <p><b>Nama Lengkap:</b></p>
+                        <input name="name" type="text" required style="flex-grow:1"
+                        placeholder="Nama Lengkap Pengguna" value="">
+                        <div class="containerHImune" style="justify-content: unset;">
+                            <div>
+                                <p><b>No Absen</b>:</p>
+                                <input name="noAbsen" type="number" min="1" max="36" required
+                                placeholder="No." value="" style="flex-grow:1">
+                            </div>
+                            <div>
+                                <p><b>Kelas</b>:</p>
+                                <select name="kelas" style="flex-grow:1">
+                                    <option value="" disabled hidden selected> <!-- Make It Auto Select Using Selected -->
+                                        -- Pilih Kelas --
+                                    </option>
+
+                                    <?php foreach($class as $item): ?>
+                                        <option value="<?=$item['id']?>">
+                                            <?=$item['name']?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="teritary-btn" type="submit" 
+                        style="padding: 5px; margin-top: 10px">
+                            Perbarui Data <i class="fa-solid fa-floppy-disk"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
         <?php include __DIR__ . "/../../components/footer.php"; ?>
 
         <script src="https://kit.fontawesome.com/c2c5e95263.js" defer crossorigin="anonymous"></script>
         <script src="/api/js/apiHelper.js" defer></script>
-        <script src="/static/js/admin/getUsersDetail.js" defer></script>
         
+        <script type="module" src="/static/js/admin/allUserPage/getUsersDetail.js" defer></script>
+        <script type="module" src="/static/js/admin/allUserPage/editBiodata.js" defer></script>
         <script type="module" src="/static/js/pagination/main.js" defer></script>
     </body>
 </html>
