@@ -136,7 +136,7 @@ function getIconByCode($code, $icons){
         <dialog id="userDetailDialog" class="popup">
             <div class="VContainer" style="padding:10px">
                 <div class="tr-anchor" style="top:25px; right:25px;">
-                    <button class="secondary-btn detail" style="padding: 2px 4px">
+                    <button class="danger-btn detail" style="padding: 2px 4px">
                         <i class="fa-solid fa-xmark fa-lg"></i>
                     </button>
                 </div>
@@ -187,7 +187,7 @@ function getIconByCode($code, $icons){
         data-user-id="">
             <div class="VContainer">
                 <div class="tr-anchor" style="top:25px; right:25px;">
-                    <button class="secondary-btn edit" style="padding: 2px 4px">
+                    <button class="danger-btn edit" style="padding: 2px 4px">
                         <i class="fa-solid fa-xmark fa-lg"></i>
                     </button>
                 </div>

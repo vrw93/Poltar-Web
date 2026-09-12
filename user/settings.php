@@ -250,7 +250,8 @@ function getStatusIconByCode(string $code): string{
                     <p style="text-align:center" id="updateDetailDateUi">
                         [tanggal]
                     </p>
-                    <table>
+                    <div class="overflow-x">
+                    <table style="min-width: 700px">
                         <thead>
                             <tr>
                                 <th style="width: 30px">No</th>
@@ -269,6 +270,7 @@ function getStatusIconByCode(string $code): string{
                             </tr>
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </dialog>
