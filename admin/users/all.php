@@ -104,14 +104,16 @@ function getIconByCode($code, $icons){
                             <?=$data['statusName'] ?? 'Tidak Daftar'?>
                         </td>
                         <td style="text-align: right;gap: 15px">
-                            <a class="no-bg-btn detail" 
+                            <a class="no-bg-btn detail" title="Lihat Detail Pengguna"
                             data-user-id="<?=$data['id']?>">
                                 <i class="fa-solid fa-clipboard-list"></i>
                             </a>
-                            <a class="no-bg-btn edit">
+                            <a class="no-bg-btn edit" title="Edit Biodata Pengguna"
+                            data-user-id="<?=$data['id']?>">
                                 <i class="fa-solid fa-user-gear"></i>
                             </a>
-                            <a class="no-bg-btn role">
+                            <a class="no-bg-btn role" title="Edit Role Pengguna"
+                            data-user-id="<?=$data['id']?>">
                                 <i class="fa-solid fa-user-tie"></i>
                             </a>
                         </td>
