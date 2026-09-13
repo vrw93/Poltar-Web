@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once __DIR__ . '/../authHelper.php';
+include __DIR__ . '/../authHelper.php';
 
 $currentPage = "";
 
@@ -11,15 +11,7 @@ include "../../data/adminmenudb.php";
 include "../../logic/uploadImage.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_SESSION['user_id'])){
-        if($_SESSION['role_id'] !== 1){
-            header("Location: /login?url=/admin/blog/create");
-            exit();
-        }
-    }else if(!isset($_SESSION['user_id'])){
-        header("Location: /login?url=/admin/blog/create");
-        exit();
-    }
+    include __DIR__ . '/../authHelper.php';
 
     if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK){
         if (!is_uploaded_file($_FILES['image']['tmp_name'])){

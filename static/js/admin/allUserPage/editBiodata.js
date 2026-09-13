@@ -22,6 +22,7 @@ async function editClickEventHandler(userId){
 function updateUi(oldUi, data){
     editBiodataDialog.innerHTML = oldUi;
     const editForm = editBiodataDialog.querySelector('form');
+    const title = editBiodataDialog.querySelector('.username');
 
     const fullname = editForm.elements.name;
     const noAbsen = editForm.elements.noAbsen;
@@ -30,6 +31,7 @@ function updateUi(oldUi, data){
     fullname.value = data.fullName;
     noAbsen.value = parseInt(data.no_absen, 10);
     kelas.value = data.kelasId;
+    title.innerText = "Edit Biodata " + data.username;
 }
 
 function toggleEditDialog(){

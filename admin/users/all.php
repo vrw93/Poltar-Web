@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once __DIR__ . '/../authHelper.php';
+include __DIR__ . '/../authHelper.php';
 
 $currentPage = "";
 require_once __DIR__ . "/../../logic/database.php";
@@ -194,7 +194,7 @@ function getIconByCode($code, $icons){
                 </div>
                 <div class="itemPanel">
                     <h2 style="padding-bottom: 5px; margin-bottom:3px;
-                    border-bottom:2px solid var(--color-light)">
+                    border-bottom:2px solid var(--color-light)" class="username">
                         Edit Biodata Pengguna
                     </h2>
                     <p style="color: var(--text-secondary);">
@@ -245,9 +245,13 @@ function getIconByCode($code, $icons){
                 </div>
                 <div class="itemPanel">
                     <h2 style="padding-bottom: 5px; margin-bottom:3px;
-                    border-bottom:2px solid var(--color-light)">
+                    border-bottom:2px solid var(--color-light)" class="username">
                         Edit Role Pengguna
                     </h2>
+                    <p style="color: var(--text-secondary);">
+                        <i class="fa-solid fa-user-tag"></i>
+                        <b>Detail Role</b>
+                    </p>
                     <form id="editBiodataForm" style="display:flex; flex-direction: column">
                         <p><b>Role</b>:</p>
                         <select name="roles">

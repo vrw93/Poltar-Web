@@ -6,7 +6,7 @@ include "../../logic/Blogs/getBlogById.php";
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    require_once __DIR__ . '/../authHelper.php';
+    include __DIR__ . '/../authHelper.php';
 
     $id = intval($_POST['id']);
 

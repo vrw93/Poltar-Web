@@ -22,10 +22,12 @@ async function editRoleClickEventHandler(userId){
 function updateUI(oldUi, data){
     editRoleUi.innerHTML = oldUi;
     const editForm = editRoleUi.querySelector("form");
+    const title = editRoleUi.querySelector(".username");
 
     const role = editForm.elements.roles;
 
     role.value = parseInt(data.roleId, 10);
+    title.innerText = "Edit Role " + data.username;
 }
 
 function loadingUI(){

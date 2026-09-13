@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once __DIR__ . '/../authHelper.php';
+include __DIR__ . '/../authHelper.php';
 
 $currentPage = "";
 include "../../data/menudb.php";
