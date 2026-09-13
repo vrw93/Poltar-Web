@@ -1,5 +1,11 @@
 const usersDetailData = new Map();
 
+function updateDetailData(newData, userId){
+    if(!usersDetailData.has(userId)) return;
+
+    usersDetailData.set(userId, newData);
+}
+
 async function checkDetailDataAvaibility(userId){
     if(usersDetailData.has(userId)){
         console.log('cached');
@@ -27,4 +33,4 @@ async function checkDetailDataAvaibility(userId){
     }
 }
 
-export default checkDetailDataAvaibility;
+export { updateDetailData, checkDetailDataAvaibility };

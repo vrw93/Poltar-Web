@@ -1,4 +1,4 @@
-import checkDetailDataAvaibility from "./dataManager.js";
+import {updateDetailData, checkDetailDataAvaibility} from "./dataManager.js";
 
 const editBiodataDialog = document.getElementById("editBiodataDialog");
 
@@ -60,16 +60,7 @@ function loadingUi(){
     `;
 }
 
-async function biodataSubmitEventHandler(event){
-    const editForm = editBiodataDialog.querySelector('form');
-    let oldEditInnerHtml = editBiodataUi.innerHTML;
-
-    const data = new FormData(editForm);
-    const biodata = Object.fromEntries(data.entries());
-    const userId = editBiodataDialog.dataset.userId;
-
-    loadingUi();
-
+async function updateBiodata(biodata, userId, oldData){
     const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
     try{
         const result = await api(
@@ -83,12 +74,32 @@ async function biodataSubmitEventHandler(event){
             }
         );
         alert(result.message);
+        if(result.success){
+            oldData.fullName = biodata.name;
+            oldData.no_absen = parseInt(biodata.noAbsen, 10);
+            oldData.kelasId = biodata.kelas;
+
+            updateDetailData(oldData, userId);
+        }
     }catch(err){
         alert('Terjadi Error Internal.');
         console.error(err);
     }
+}
 
-    editBiodataUi.innerHTML = oldEditInnerHtml;
+async function biodataSubmitEventHandler(){
+    const editForm = editBiodataDialog.querySelector('form');
+    let oldInnerHtml = editBiodataDialog.innerHTML;
+
+    const userId = editBiodataDialog.dataset.userId;
+    const data = new FormData(editForm);
+    const biodata = Object.fromEntries(data.entries());
+    const oldData = await checkDetailDataAvaibility(userId);
+
+    loadingUi();
+    await updateBiodata(biodata, userId, oldData);
+
+    updateUi(oldInnerHtml, oldData);
 }
 
 document.addEventListener('click', (event) => {

@@ -1,4 +1,4 @@
-import checkDetailDataAvaibility from "./dataManager.js";
+import { checkDetailDataAvaibility } from "./dataManager.js";
 
 const userDetailDialog = document.getElementById("userDetailDialog");
 const detailUi = userDetailDialog.querySelector('.itemPanel');
