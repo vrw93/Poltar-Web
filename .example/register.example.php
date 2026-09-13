@@ -1,8 +1,8 @@
 <?php
-#If You Want To Use This, Remove These And Rename The File To register.php
-Header("Location: /register");
-exit();
-#======================================================================
+# ==================================================================
+# | If you want to use this code change the file name by removing  |
+# | ".example" in it and move it to actual folder outside .example |
+# ==================================================================
 
 session_start();
 include "data/menudb.php";
