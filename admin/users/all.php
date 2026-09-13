@@ -12,6 +12,7 @@ require_once __DIR__ . "/../../logic/registration/getClass.php";
 
 $getDB = new getDbData();
 $class = getClass($database);
+$roles = $getDB->getAllTableData($database, 'roles');
 
 #pagination
 $limit = 10;
@@ -233,6 +234,41 @@ function getIconByCode($code, $icons){
                 </div>
             </div>
         </dialog>
+        
+        <dialog id="editRoleDialog" class="popup"
+        data-user-id="">
+            <div class="VContainer">
+                <div class="tr-anchor" style="top:25px; right:25px;">
+                    <button class="danger-btn role" style="padding: 2px 4px">
+                        <i class="fa-solid fa-xmark fa-lg"></i>
+                    </button>
+                </div>
+                <div class="itemPanel">
+                    <h2 style="padding-bottom: 5px; margin-bottom:3px;
+                    border-bottom:2px solid var(--color-light)">
+                        Edit Role Pengguna
+                    </h2>
+                    <form id="editBiodataForm" style="display:flex; flex-direction: column">
+                        <p><b>Role</b>:</p>
+                        <select name="roles">
+                            <option value="" disabled hidden selected>
+                                -- Pilih Role --
+                            </option>
+
+                            <?php foreach($roles as $item): ?>
+                                <option value="<?=$item['id']?>">
+                                    <?=$item['name']?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                        <button class="teritary-btn" type="submit" 
+                        style="padding: 5px; margin-top: 10px">
+                            Perbarui Data <i class="fa-solid fa-floppy-disk"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
 
         <?php include __DIR__ . "/../../components/footer.php"; ?>
 
@@ -241,6 +277,7 @@ function getIconByCode($code, $icons){
         
         <script type="module" src="/static/js/admin/allUserPage/getUsersDetail.js" defer></script>
         <script type="module" src="/static/js/admin/allUserPage/editBiodata.js" defer></script>
+        <script type="module" src="/static/js/admin/allUserPage/editRole.js" defer></script>
         <script type="module" src="/static/js/pagination/main.js" defer></script>
     </body>
 </html>
