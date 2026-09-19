@@ -37,18 +37,25 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 > [!NOTE]
 > This Prone To Change
 
+### 🛠️ | In Progress
+
 | Task | Type | Priority | Status |
-|---|---|---|--|
-| Add Role Feature | 💾 System | 🟩 High | 🟨 WIP |
+|---|---|---|---|
+| Add More Animation | ✨ Looks | 🟩 High | 🟨 WIP |
 | Add Users Search | 🎯 QOL | 🟩 High | ⬛ Not Implemented |
 | Add Quota Editor | 💾 System | 🟩 High | ⬛ Not Implemented |
 | Add Google Auth | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
 | Add Blog Comment | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
 | Add Theme | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
 | Add Blog Author And View Count | 💾 System | 🟧 Medium | ⬛ Not Implemented |
-| Add Password Complexsity Check | 🔑 Security | 🟧 Medium | ⬛ Not Implemented |
+| Add Password Complexity Check | 🔑 Security | 🟧 Medium | ⬛ Not Implemented |
 | Add Site Setting | 💾 System | 🟧 Medium | ⬛ Not Implemented |
 
+### ✅ | Completed
+
+| Task | Type | Priority | Status |
+|---|---|---|---|
+| Add Role Feature | 💾 System | 🟩 High | 🟩 Implemented |
 ## 📑 | License
 This Project Is Under MIT LICENSE [See More](LICENSE).<br>
 Copy Right By VrwDev © 2026
