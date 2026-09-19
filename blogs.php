@@ -13,6 +13,7 @@ $limit = 12;
 $blogCount = $getDB->getGeneralCount($database, 'blog_posts');
 
 $blogPosts = getBlogPostWithLimit($database, $limit);
+$title = "Blog | Poltar Web";
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +22,9 @@ $blogPosts = getBlogPostWithLimit($database, $limit);
         <title>Blogs | Poltar SMK Negeri 1 Giritontro</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf_token" content="<?=$_SESSION['csrf_token'] ?? '' ?>">
+        
+        <?php include __DIR__ . "/components/opengraph.php"?>
+
         <link rel="stylesheet" href="static/css/mainStyle.css">
         <link rel="stylesheet" href="static/css/blogPost.css">
         <link rel="stylesheet" href="static/css/theme.css">

@@ -14,6 +14,7 @@ $limit = 12;
 $galleryCount = $getDB->getGeneralCount($database, 'gallery_Posts');
 
 $galleryPosts = getGalleryPostWithLimit($database, $limit);
+$title = "Galeri | Poltar Web";
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +23,9 @@ $galleryPosts = getGalleryPostWithLimit($database, $limit);
         <title>Polisi Taruna - SMK NEGERI 1 GIRITONTRO</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf_token" content="<?=$_SESSION['csrf_token'] ?? '' ?>">
+        
+        <?php include __DIR__ . "/components/opengraph.php"?>
+
         <link rel="stylesheet" href="static/css/mainStyle.css">
         <link rel="stylesheet" href="static/css/theme.css">
         <link rel="stylesheet" href="static/css/gallery.css">

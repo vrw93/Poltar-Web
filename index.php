@@ -2,13 +2,14 @@
 session_start();
 
 $currentPage = "home"; 
-include "logic/database.php";
-include "logic/Blogs/getLatestBlog.php";
-include "logic/Gallery/getLatestGalleryPost.php";
-include "data/menudb.php";
+require_once __DIR__ . "/logic/database.php";
+require_once __DIR__ . "/logic/Blogs/getLatestBlog.php";
+require_once __DIR__ . "/logic/Gallery/getLatestGalleryPost.php";
+require_once __DIR__ . "/data/menudb.php";
 
 $blogPosts = getLatestBlogPosts($database, 5);
 $galleryPosts = getLatestGalleryPosts($database, 8);
+$title = "Poltar Web";
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +17,9 @@ $galleryPosts = getLatestGalleryPosts($database, 8);
     <head>
         <title>Polisi Taruna - SMK NEGERI 1 GIRITONTRO</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <?php include __DIR__ . "/components/opengraph.php"?>
+
         <link rel="stylesheet" href="static/css/mainStyle.css">
         <link rel="stylesheet" href="static/css/theme.css">
         <link rel="stylesheet" href="static/css/gallery.css">

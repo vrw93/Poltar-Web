@@ -27,13 +27,17 @@ session_start();
 $mardownParser = new markdownParser();
 
 $content = $mardownParser->Parse($currentPost['content']);
-
+$titleNonOg = $currentPost['title'];
+$title = $currentPost['title'] . " | Blog";
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title><?= $currentPost['title'] ?> | SMK NEGERI 1 GIRITONTRO</title>
+        <title><?=$titleNonOg?> | SMK NEGERI 1 GIRITONTRO</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <?php include __DIR__ . "/components/opengraph.php"?>
+
         <link rel="stylesheet" href="static/css/mainStyle.css">
         <link rel="stylesheet" href="static/css/markdown.css">
         <link rel="stylesheet" href="static/css/blogPost.css">
@@ -45,7 +49,7 @@ $content = $mardownParser->Parse($currentPost['content']);
         <?php include "components/navbar.php"; ?>
         <main class="mainPost">
             <div class="blogContent">
-                <h1><?= $currentPost['title'] ?></h1>
+                <h1><?=$titleNonOg?></h1>
 
                 <small><?= $currentPost['createdAt'] ?></small><br>
 
