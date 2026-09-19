@@ -12,36 +12,43 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 
 ---
 
-## Tech Stack 🚀
+## 🚀 | Tech Stack
 
 - PHP 8.x
 - HTML5
 - CSS3
 - JavaScript
 
-## Status 🏗
+## 🚧 | Development Progress
 
 > [!IMPORTANT]
 > This project is still heavily a work in progress.
 
-- [x] Gallery
-- [ ] Blog
-- [x] Home Page
-- [ ] Admin
-- [ ] Recruitment System
+| Feature | Progress |
+|---|---|
+| Gallery | `████████████████████` 100% |
+| Home Page | `████████████████████` 100% |
+| Blogs | `███████████████░░░░░` 75% |
+| Recruitment System | `██████████████░░░░░░` 70% |
+| Admin | `█████████████░░░░░░░` 65% |
+| User Settings | `█████████████░░░░░░░` 65% |
 
-## Road Map 🗺
+## 🗺 | Road Map
 > [!NOTE]
 > This Prone To Change
 
-1. Add Google Auth
-2. Add Blog Comment
-3. Add Theme
-4. Add Role Feature
-5. Add Blog Author And View Count
-6. Add Password Complexsity Check
-7. Add Site Setting
+| Task | Type | Priority | Status |
+|---|---|---|--|
+| Add Role Feature | 💾 System | 🟩 High | 🟨 WIP |
+| Add Users Search | 🎯 QOL | 🟩 High | ⬛ Not Implemented |
+| Add Quota Editor | 💾 System | 🟩 High | ⬛ Not Implemented |
+| Add Google Auth | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
+| Add Blog Comment | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
+| Add Theme | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
+| Add Blog Author And View Count | 💾 System | 🟧 Medium | ⬛ Not Implemented |
+| Add Password Complexsity Check | 🔑 Security | 🟧 Medium | ⬛ Not Implemented |
+| Add Site Setting | 💾 System | 🟧 Medium | ⬛ Not Implemented |
 
-## License 📑
+## 📑 | License
 This Project Is Under MIT LICENSE [See More](LICENSE).<br>
 Copy Right By VrwDev © 2026
