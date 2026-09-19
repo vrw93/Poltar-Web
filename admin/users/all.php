@@ -56,7 +56,7 @@ function getIconByCode($code, $icons){
             </h3>
 
             <div class="overflow-x">
-            <table style="min-width: 1100px" id="unverifiedPage">
+            <table style="min-width: 1100px" id="allUserPage">
                 <thead>
                     <tr>
                         <th style="width: 30px;">No</th>
@@ -278,10 +278,15 @@ function getIconByCode($code, $icons){
 
         <script src="https://kit.fontawesome.com/c2c5e95263.js" defer crossorigin="anonymous"></script>
         <script src="/api/js/apiHelper.js" defer></script>
+        <script>
+            const limit = <?=$limit?>;
+            const icons = <?=json_encode($icons)?>;
+        </script>
         
         <script type="module" src="/static/js/admin/allUserPage/getUsersDetail.js" defer></script>
         <script type="module" src="/static/js/admin/allUserPage/editBiodata.js" defer></script>
         <script type="module" src="/static/js/admin/allUserPage/editRole.js" defer></script>
         <script type="module" src="/static/js/pagination/main.js" defer></script>
+        <script type="module" src="/static/js/pagination/admin/allUsersPage.js" defer></script>
     </body>
 </html>
