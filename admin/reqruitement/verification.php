@@ -15,7 +15,7 @@ $data = $buildEvaluateData->main($database);
 #echo("<pre>");
 #print_r($data);
 #echo("</pre>");
-header('Location: /admin/reqruitement/evaluate');
+header('Location: /admin/users/verification');
 exit();
 ?>
 
