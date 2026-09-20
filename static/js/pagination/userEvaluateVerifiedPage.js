@@ -149,7 +149,7 @@ async function updatePendaftarSekor(id, newSekor){
         verifiedData.set(currentPage, data);
     }
 
-    if(oldata.pendaftarData?.[id].sekor !== newSekor){
+    if(oldata?.pendaftarData?.[id].sekor !== newSekor){
         const newConflictData = await getConflictedData();
         conflictData = {...newConflictData, ...oldConflictData};
 

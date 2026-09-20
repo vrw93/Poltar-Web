@@ -67,7 +67,7 @@ async function selectPendaftar(id, jabatanId){
     const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
 
     const result = await api(
-        '/api/conflictResolverAPI.php',
+        '/api/admin/conflictResolverAPI.php',
         csrfToken,
         {
             pendaftaranId: id,

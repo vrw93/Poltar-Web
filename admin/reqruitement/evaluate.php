@@ -138,6 +138,16 @@ $unverifiedData = $buildEvaluateData->getUnverifiedData($database, $limit);
                 Pendaftar Sudah Diverifikasi
                 <hr>
             </h3>
+            <form class="containerHImune" 
+            style="padding: 0px 10px; gap: 10px">
+                <input type="search" name="verifiedSearch" 
+                placeholder="Cari Pendaftar..."
+                style="width: 100%">
+                <button class="teritary-btn" type="submit"
+                style="padding: 5px 10px">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
             <div class="overflow-x">
             <table style="min-width:900px" id="verifiedPage">
                 <thead>
@@ -255,10 +265,10 @@ $unverifiedData = $buildEvaluateData->getUnverifiedData($database, $limit);
         
         <script src="https://kit.fontawesome.com/c2c5e95263.js" crossorigin="anonymous"></script>
         <script src="/api/js/apiHelper.js" defer></script>
-        <script src="/static/js/admin/getDetailPendaftarData.js" defer></script>
-        <script src="/static/js/admin/conflictResolver.js" defer></script>
+        <script src="/static/js/admin/evaluatePendaftarPage/getDetailPendaftarData.js" defer></script>
+        <script src="/static/js/admin/evaluatePendaftarPage/conflictResolver.js" defer></script>
 
-        <script type="module" src="/static/js/admin/nilaiPendaftarByPendaftaranId.js" defer></script>
+        <script type="module" src="/static/js/admin/evaluatePendaftarPage/nilaiPendaftarByPendaftaranId.js" defer></script>
         <script type="module" src="/static/js/pagination/main.js" defer></script>
         <script type="module" src="/static/js/pagination/userEvaluateVerifiedPage.js" defer></script>
     </body>
