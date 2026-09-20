@@ -26,7 +26,7 @@ async function checkDataAvibilty(id){
     if(!(id in userData)){
         const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
         const result = await api(
-            '/api/admin/getDetailPendaftaranDataByIdAPI.php',
+            '/api/admin/pendaftaran/getDetailPendaftaranDataByIdAPI.php',
             csrfToken,
             {
                 pendaftaranId: id

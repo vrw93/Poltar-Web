@@ -27,7 +27,7 @@ async function nilaiPendaftarByPenId(id, sekorUi/*, statusUi*/){
         const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
 
         const result = await api(
-            '/api/admin/nilaiPendaftarAPI.php',
+            '/api/admin/pendaftaran/nilaiPendaftarAPI.php',
             csrfToken,
             {
                 pendaftaranId: id,
