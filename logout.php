@@ -1,8 +1,4 @@
 <?php
-
-include __DIR__ . "/../../logout.php";
-exit();
-
 session_start();
 
 session_regenerate_id(true);

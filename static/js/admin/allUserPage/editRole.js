@@ -60,7 +60,7 @@ async function updateRole(newRole, userId){
     const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
     try{
         const result = await api(
-            '/api/changeRolesByIdAPI.php',
+            '/api/admin/users/changeRolesByIdAPI.php',
             csrfToken,
             {
                 userId: userId,

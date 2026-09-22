@@ -66,7 +66,7 @@ async function updateBiodata(biodata, userId, oldData){
     const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
     try{
         const result = await api(
-            '/api/updateBiodataAdminAPI.php',
+            '/api/admin/users/updateBiodataAdminAPI.php',
             csrfToken,
             {
                 name: biodata.name,

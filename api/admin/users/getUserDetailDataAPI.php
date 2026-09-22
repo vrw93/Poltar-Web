@@ -1,11 +1,11 @@
 <?php
-require_once __DIR__ . "/../logic/database.php";
-require_once __DIR__ . "/../logic/getDataFromDB.php";
+require_once __DIR__ . "/../../../logic/database.php";
+require_once __DIR__ . "/../../../logic/getDataFromDB.php";
 
 $getDB = new getDbData();
 
 $admin = true;$csrf = true;$login = true;
-include __DIR__ . "/verifyHelper.php";
+include __DIR__ . "/../../verifyHelper.php";
 
 $data = json_decode(
     file_get_contents('php://input'),

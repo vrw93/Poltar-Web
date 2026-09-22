@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . "/../logic/database.php";
-require_once __DIR__ . "/../logic/account/changeRole.php";
+require_once __DIR__ . "/../../../logic/database.php";
+require_once __DIR__ . "/../../../logic/account/changeRole.php";
 
 $admin = true;$csrf = true;$login = true;
-include __DIR__ . "/verifyHelper.php";
+include __DIR__ . "/../../verifyHelper.php";
 
 $data = json_decode(
     file_get_contents('php://input'),

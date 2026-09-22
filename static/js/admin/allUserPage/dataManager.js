@@ -15,7 +15,7 @@ async function checkDetailDataAvaibility(userId){
     const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
     try{
         const result = await api(
-            '/api/getUserDetailDataAPI.php',
+            '/api/admin/users/getUserDetailDataAPI.php',
             csrfToken,
             {
                 userId: userId
