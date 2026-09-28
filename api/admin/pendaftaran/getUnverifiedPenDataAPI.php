@@ -1,8 +1,8 @@
 <?php
-include __DIR__ . "/../logic/database.php";
-include __DIR__ . "/../logic/registration/admin/buildEvaluateData.php";
+include __DIR__ . "/../../../logic/database.php";
+include __DIR__ . "/../../../logic/registration/admin/buildEvaluateData.php";
 
-include __DIR__ . "/verifyHelper.php";
+include __DIR__ . "/../../verifyHelper.php";
 
 $data = json_decode(
     file_get_contents('php://input'),

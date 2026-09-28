@@ -1,7 +1,7 @@
 import eventBus from '/static/js/pagination/eventBus.js';
 
 const verifiedData = new Map();
-const table = document.getElementById('verifiedPage');
+const table = document.getElementById('unverifiedPage');
 const tbody = table.querySelector('tbody');
 
 async function eventCallback(event){
@@ -9,8 +9,8 @@ async function eventCallback(event){
     const offset = (limit * pageN) - limit;
 
     loadingUI();
-    const data = await checkVerifiedDataAvibility(limit, offset, pageN);
-    updateUI(data.pendaftarData, offset);
+    const data = await checkUnverifiedDataAvailbility(limit, offset, pageN);
+    updateUI(data, offset);
 }
 
 function loadingUI(){
@@ -64,7 +64,7 @@ function updateUI(datas, offset){
     tbody.innerHTML = tableRow;
 }
 
-async function checkVerifiedDataAvibility(limit, offset, pageN){
+async function checkUnverifiedDataAvailbility(limit, offset, pageN){
     if(verifiedData.has(pageN)){
         console.log('Cached');
         return verifiedData.get(pageN);
@@ -73,7 +73,7 @@ async function checkVerifiedDataAvibility(limit, offset, pageN){
     const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
     try{
         const result = await api(
-            '/api/getVerifiedPenDataAPI.php',
+            '/api/admin/pendaftaran/getUnverifiedPenDataAPI.php',
             csrfToken,
             {
                 offset: offset,
@@ -93,7 +93,7 @@ async function checkVerifiedDataAvibility(limit, offset, pageN){
 }
 
 eventBus.addEventListener('pageChange', (event) => {
-    if(event.detail.target === 'verifiedPage'){
+    if(event.detail.target === 'unverifiedPage'){
         eventCallback(event);
     }
 });

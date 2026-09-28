@@ -194,8 +194,9 @@ $uDCount = $getDbData->getGeneralCount($database, 'pendaftaran', 'unverified');
         <script src="https://kit.fontawesome.com/c2c5e95263.js" crossorigin="anonymous"></script>
         <script src="/api/js/apiHelper.js" defer></script>
         <script src="/static/js/admin/verifyPendaftarById.js" defer></script>
+        
         <script type="module" src="/static/js/pagination/main.js" defer></script>
-        <script type="module" src="/static/js/pagination/userVerifyVerifiedPage.js" defer></script>
-        <script type="module" src="/static/js/pagination/userVerifyUnverifiedPage.js" defer></script>
+        <script type="module" src="/static/js/pagination/admin/users/userVerifyVerifiedPage.js" defer></script>
+        <script type="module" src="/static/js/pagination/admin/users/userVerifyUnverifiedPage.js" defer></script>
     </body>
 </html> 
