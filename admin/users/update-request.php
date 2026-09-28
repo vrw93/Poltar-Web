@@ -8,7 +8,7 @@ include __DIR__ . "/../../logic/database.php";
 include __DIR__ . "/../../logic/getDataFromDB.php";
 include __DIR__ . "/../../data/adminmenudb.php";
 
-$limit = 1;
+$limit = 10;
 
 $getDtaHlpr = new getDbData();
 $inactiveUserRequest = $getDtaHlpr->getUserDataUpdateRequest($database, 'inactive', $limit);
