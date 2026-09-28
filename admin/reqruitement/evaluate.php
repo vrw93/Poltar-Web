@@ -138,7 +138,7 @@ $unverifiedData = $buildEvaluateData->getUnverifiedData($database, $limit);
                 Pendaftar Sudah Diverifikasi
                 <hr>
             </h3>
-            <form class="containerHImune" 
+            <form class="containerHImune" id="userSearch" 
             style="padding: 0px 10px; gap: 10px">
                 <input type="search" name="verifiedSearch" 
                 placeholder="Cari Pendaftar..."
@@ -255,7 +255,7 @@ $unverifiedData = $buildEvaluateData->getUnverifiedData($database, $limit);
             </div>
         </dialog>
 
-        <?php include "../../components/footer.php"; ?>
+        <?php include __DIR__ . "/../../components/footer.php"; ?>
 
         <script>
             let conflictData = <?=json_encode($buildEvaluateData->getConflictedData($database))?>;
@@ -267,6 +267,7 @@ $unverifiedData = $buildEvaluateData->getUnverifiedData($database, $limit);
         <script src="/api/js/apiHelper.js" defer></script>
         <script src="/static/js/admin/evaluatePendaftarPage/getDetailPendaftarData.js" defer></script>
         <script src="/static/js/admin/evaluatePendaftarPage/conflictResolver.js" defer></script>
+        <script src="/static/js/admin/evaluatePendaftarPage/searchUser.js" defer></script>
 
         <script type="module" src="/static/js/admin/evaluatePendaftarPage/nilaiPendaftarByPendaftaranId.js" defer></script>
         <script type="module" src="/static/js/pagination/admin/users/userEvaluateVerifiedPage.js" defer></script>

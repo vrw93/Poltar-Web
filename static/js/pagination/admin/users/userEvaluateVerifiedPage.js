@@ -121,7 +121,7 @@ async function getConflictedData(){
     const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
     try{
         const result = await api(
-            '/api/getConflictedPenDataAPI.php',
+            '/api/admin/pendaftaran/getConflictedPenDataAPI.php',
             csrfToken,
             {}
         );
