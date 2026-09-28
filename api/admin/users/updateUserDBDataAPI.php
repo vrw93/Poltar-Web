@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . "/../logic/database.php";
-require_once __DIR__ . "/../logic/enum/updateUserDataEnum.php";
-require_once __DIR__ . "/../logic/account/updateDBData.php";
+require_once __DIR__ . "/../../../logic/database.php";
+require_once __DIR__ . "/../../../logic/enum/updateUserDataEnum.php";
+require_once __DIR__ . "/../../../logic/account/updateDBData.php";
 
-require_once __DIR__ . "/verifyHelper.php";
+require_once __DIR__ . "/../../verifyHelper.php";
 
 $data = json_decode(
     file_get_contents('php://input'),

@@ -11,7 +11,7 @@ async function getRequestDetail(id){
 
     try{
         const result = await api(
-            '/api/getUserUpdateRequestDetailAPI.php',
+            '/api/admin/users/getUserUpdateRequestDetailAPI.php',
             csrfToken,
             {
                 id: id
@@ -136,7 +136,7 @@ async function UpdateRequest(userId, requestId, status,
     try{
         const newValue = data[dataIndex].realValue ?? data[dataIndex].newValue;
         const result = await api(
-            '/api/updateUserDBDataAPI.php',
+            '/api/admin/users/updateUserDBDataAPI.php',
             csrfToken,
             {
                 userId: userId,

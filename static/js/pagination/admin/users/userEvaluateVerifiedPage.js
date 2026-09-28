@@ -98,7 +98,7 @@ async function checkVerifiedDataAvailability(limit, offset, pageN){
     const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
     try{
         const result = await api(
-            '/api/getVerifiedPenDataAPI.php',
+            '/api/admin/pendaftaran/getVerifiedPenDataAPI.php',
             csrfToken,
             {
                 offset: offset,

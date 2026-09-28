@@ -168,7 +168,7 @@ $unverifiedData = $buildEvaluateData->getUnverifiedData($database, $limit);
                     </tr>
                     <tr>
                         <td colspan="7" style="text-align: center">
-                            Belum Ada User Yang Mendaftar/Belum Diverifikasi
+                            Belum Ada User Yang Mendaftar/Diverifikasi
                         </td>
                     </tr>
                     <?php endif;?>
@@ -269,7 +269,7 @@ $unverifiedData = $buildEvaluateData->getUnverifiedData($database, $limit);
         <script src="/static/js/admin/evaluatePendaftarPage/conflictResolver.js" defer></script>
 
         <script type="module" src="/static/js/admin/evaluatePendaftarPage/nilaiPendaftarByPendaftaranId.js" defer></script>
+        <script type="module" src="/static/js/pagination/admin/users/userEvaluateVerifiedPage.js" defer></script>
         <script type="module" src="/static/js/pagination/main.js" defer></script>
-        <script type="module" src="/static/js/pagination/userEvaluateVerifiedPage.js" defer></script>
     </body>
 </html> 

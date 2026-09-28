@@ -34,7 +34,7 @@ async function checkDetailDataAvibility(requestId){
     const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
     try{
         const result = await api(
-            '/api/getUserUpdateRequestDetailAPI.php',
+            '/api/admin/users/getUserUpdateRequestDetailAPI.php',
             csrfToken,
             {
                 id: requestId

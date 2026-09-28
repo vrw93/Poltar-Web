@@ -1,8 +1,8 @@
 <?php
-include __DIR__ . "/../logic/database.php";
-include __DIR__ . "/../logic/registration/admin/buildEvaluateData.php";
+include __DIR__ . "/../../../logic/database.php";
+include __DIR__ . "/../../../logic/getDataFromDB.php";
 
-include __DIR__ . "/verifyHelper.php";
+include __DIR__ . "/../../verifyHelper.php";
 
 $data = json_decode(
     file_get_contents('php://input'),
@@ -12,15 +12,17 @@ $data = json_decode(
 $result = false;
 $msg = "N/a";
 
-if(isset($data['offset']) && isset($data['limit'])){
-    if(is_numeric($data['offset']) && is_numeric($data['limit'])){
+if(isset($data['offset']) && isset($data['limit']) && isset($data['criteria'])){
+    if(is_numeric($data['offset']) && is_numeric($data['limit']) && is_string($data['criteria'])){
         $offset = (int)$data['offset'];
         $limit = (int)$data['limit'];
+        $criteria = (string)$data['criteria'];
 
         try{
-            $buildEvaluateData = new BuildEvaluateData();
-            $verifiedData = $buildEvaluateData->getVerifiedData(
+            $getDBData = new getDbData();
+            $inactiveData = $getDBData->getUserDataUpdateRequest(
                 $database,
+                $criteria,
                 $limit,
                 $offset
             );
@@ -30,6 +32,7 @@ if(isset($data['offset']) && isset($data['limit'])){
         }catch(Throwable $e){
             $result = false;
             $msg = "Terjadi Kesalahan Internal";
+            error_log($e);
         }
     }else{
         $result = false;
@@ -45,12 +48,12 @@ if($result){
     echo json_encode([
         'success' => true,
         'message' => $msg,
-        'data' => $verifiedData
+        'data' => $inactiveData
     ]);
 }else{
     echo json_encode([
         'success' => false,
-        'message' => $msg
+        'message' => $msg,
     ]);
 }
 ?>

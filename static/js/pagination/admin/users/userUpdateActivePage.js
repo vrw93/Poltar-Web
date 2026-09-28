@@ -1,7 +1,7 @@
 import eventBus from '/static/js/pagination/eventBus.js';
 
 const inactiveData = new Map();
-const table = document.getElementById('inactivePage');
+const table = document.getElementById('activePage');
 const tbody = table.querySelector('tbody');
 
 async function eventCallback(event){
@@ -60,7 +60,7 @@ function updateUI(datas, offset){
                 <td style="text-align: right">
                     <a class="detail-btn" data-request-id="${data.id}"
                     data-created-at="${data.createdAt}"
-                    data-user-id="${data.userId}" data-is-active='false'>
+                    data-user-id="${data.userId}" data-is-active='true'>
                         <i class="fa-solid fa-clipboard-list"></i>
                     </a>
                 </td>
@@ -79,9 +79,9 @@ async function checkInactiveDataAvibility(limit, offset, pageN){
 
     const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
     try{
-        const criteria = 'inactive';
+        const criteria = 'active';
         const result = await api(
-            '/api/getUserUpdateRequest.php',
+            '/api/admin/users/getUserUpdateRequestAPI.php',
             csrfToken,
             {
                 offset: offset,
@@ -102,7 +102,7 @@ async function checkInactiveDataAvibility(limit, offset, pageN){
 }
 
 eventBus.addEventListener('pageChange', (event) => {
-    if(event.detail.target === 'inactivePage'){
+    if(event.detail.target === 'activePage'){
         eventCallback(event);
     }
 });

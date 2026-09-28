@@ -8,7 +8,7 @@ include __DIR__ . "/../../logic/database.php";
 include __DIR__ . "/../../logic/getDataFromDB.php";
 include __DIR__ . "/../../data/adminmenudb.php";
 
-$limit = 10;
+$limit = 1;
 
 $getDtaHlpr = new getDbData();
 $inactiveUserRequest = $getDtaHlpr->getUserDataUpdateRequest($database, 'inactive', $limit);
@@ -217,8 +217,9 @@ echo('</pre>');*/
         <script src="https://kit.fontawesome.com/c2c5e95263.js" crossorigin="anonymous"></script>
         <script src="/api/js/apiHelper.js" defer></script>
         <script src="/static/js/admin/verifyUserUpdateRequest.js" defer></script>
+        
         <script type="module" src="/static/js/pagination/main.js" defer></script>
-        <script type="module" src="/static/js/pagination/userUpdateInactivePage.js" defer></script>
-        <script type="module" src="/static/js/pagination/userUpdateActivePage.js" defer></script>
+        <script type="module" src="/static/js/pagination/admin/users/userUpdateInactivePage.js" defer></script>
+        <script type="module" src="/static/js/pagination/admin/users/userUpdateActivePage.js" defer></script>
     </body>
 </html>
