@@ -45,7 +45,7 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 | Add More Animation | ✨ Looks | 🟩 High | ⬛ Not Implemented |
 | Add Google Auth | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
 | Add Blog Comment | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
-| Add Theme | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
+| Add Theme | ✨ Looks | 🟧 Medium | ⬛ Not Implemented |
 | Add Blog Author And View Count | 💾 System | 🟧 Medium | ⬛ Not Implemented |
 | Add Password Complexity Check | 🔑 Security | 🟧 Medium | ⬛ Not Implemented |
 | Add Site Setting | 💾 System | 🟧 Medium | ⬛ Not Implemented |

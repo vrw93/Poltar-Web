@@ -4,7 +4,6 @@ session_start();
 include __DIR__ . '/../authHelper.php';
 
 $currentPage = "daftar panel";
-require_once __DIR__ . "/../../data/menudb.php";
 require_once __DIR__ . "/../../logic/database.php";
 require_once __DIR__ . "/../../data/adminmenudb.php";
 require_once __DIR__ . "/../../logic/registration/admin/buildEvaluateData.php";
