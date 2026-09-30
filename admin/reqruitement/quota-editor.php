@@ -15,6 +15,7 @@ $jabatanMgr = new jabatanManager($database);
 
 #datas
 $activeJabatanDatas = $jabatanMgr->getFullActiveData();
+$inActiveJabatanDatas = $jabatanMgr->getFullInActiveData();
 
 #pages
 $limit = 10;
@@ -23,7 +24,11 @@ $ACount = $getDBData->getGeneralCount(
     'jabatan',
     'isActive'
 );
-$count = 20;
+$IACount = $getDBData->getGeneralCount(
+    $database,
+    'jabatan',
+    'isInactive'
+);
 ?>
 
 <!DOCTYPE html>
@@ -65,6 +70,19 @@ $count = 20;
                     </tr>
                 </thead>
                 <tbody>
+                    <?php if(count($activeJabatanDatas) === 0): ?>
+                    <tr>
+                        <td colspan="7" style="text-align: center">
+                            <i class="fa-solid fa-folder-open fa-2xl"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" style="text-align: center">
+                            Tidak Ada Jabatan Aktif
+                        </td>
+                    </tr>
+                    <?php endif;?>
+
                     <?php
                     $index = 1;
                     foreach($activeJabatanDatas as $data): 
@@ -77,10 +95,13 @@ $count = 20;
                         </td>
                         <td><?=$data['StatusName']?></td>
                         <td style="text-align: right">
-                            <a class="no-bg-btn edit-btn" title="Edit">
+                            <a class="no-bg-btn edit-btn" title="Edit"
+                            data-jabatan-id="<?=$data['id']?>"
+                            data-jabatan-name="<?=$data['name']?>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="no-bg-btn deactivate" title="Matikan Jabatan">
+                            <a class="no-bg-btn deactivate" title="Matikan Jabatan"
+                            data-jabatan-id="<?=$data['id']?>">
                                 <i class="fa-solid fa-lock"></i>
                             </a>
                         </td>
@@ -114,37 +135,89 @@ $count = 20;
                     </tr>
                 </thead>
                 <tbody>
+                    
+                    <?php if(count($inActiveJabatanDatas) === 0): ?>
                     <tr>
-                        <td style="text-align: center">1.</td>
-                        <td>[jabatan_name]</td>
-                        <td style="text-align: center">[jabatan_kuota]</td>
-                        <td>[jabatan_status]</td>
+                        <td colspan="7" style="text-align: center">
+                            <i class="fa-solid fa-folder-open fa-2xl"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" style="text-align: center">
+                            Tidak Ada Jabatan Yang Dinonaktifkan
+                        </td>
+                    </tr>
+                    <?php endif;?>
+
+                    <?php
+                    $index = 1;
+                    foreach($inActiveJabatanDatas as $data): 
+                    ?>
+                    <tr>
+                        <td style="text-align: center"><?=$index++?></td>
+                        <td><?=$data['name']?></td>
+                        <td style="text-align: center">
+                            <?=$data['kouta']?>
+                        </td>
+                        <td><?=$data['StatusName']?></td>
                         <td style="text-align: right">
-                            <a class="no-bg-btn edit-btn" title="Edit">
+                            <a class="no-bg-btn edit-btn" title="Edit"
+                            data-jabatan-id="<?=$data['id']?>"
+                            data-jabatan-name="<?=$data['name']?>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="no-bg-btn activate" title="Hidupkan Jabatan">
-                                <i class="fa-solid fa-unlock"></i>
+                            <a class="no-bg-btn deactivate" title="Matikan Jabatan"
+                            data-jabatan-id="<?=$data['id']?>">
+                                <i class="fa-solid fa-lock"></i>
                             </a>
                         </td>
                     </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
             </div>
             <?php
                 $pageId = 'deactiveJabatanPage';
-                $pageCount = ceil(($count/$limit));
+                $pageCount = ceil(($IACount/$limit));
                 include __DIR__ . "/../../components/pagination.php";
                 unset($pageCount);
                 unset($pageId);
             ?>
         </div>
 
+        <dialog id="editorDialog" class="popup">
+            <div class="tr-anchor">
+                <a class="tr-anchor edit-btn" style="top: 20px; right:20px; padding: 2px">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </div>
+            <div class="itemPanel">
+                    <h2 style="margin:0px">
+                        <i class="fa-solid fa-address-card"></i>
+                        Edit Jabatan [name]
+                        <hr>
+                    </h2>
+                    <form id="editForm" class="VContainer" style="gap:3px">
+                        <p><b>Nama</b>:</p>
+                        <input placeholder="Masukkan Nama Jabatan"
+                        type="text" required value="">
+                        <p><b>Kuota</b>:</p>
+                        <input placeholder="Masukkan Kuota Jabatan"
+                        type="number" required value="" min="1">
+                        <button type="submit" class="teritary-btn">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Simpan Perubahan
+                        </button>
+                    </form>
+            </div>
+        </dialog>
+
         <?php include __DIR__ . "/../../components/footer.php"; ?>
         
         <script src="https://kit.fontawesome.com/c2c5e95263.js" crossorigin="anonymous"></script>
         <script src="/api/js/apiHelper.js" defer></script>
-        
+        <script src="/static/js/admin/jabatan/jabatanEditorDialog.js" defer></script>
+
         <script type="module" src="/static/js/pagination/main.js" defer></script>
     <body>
 </html>
