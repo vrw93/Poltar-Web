@@ -73,6 +73,10 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
                         Jumlah Pendaftar Belum Di Nilai : 
                         <?=$getDB->getEvalPenCount($database, 'nEval')?>
                     </p>
+                    <a class="teritary-btn" href="reqruitement/quota-editor">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        Edit Jabatan Dan Kuota
+                    </a>
                     <a class="primary-btn" href="reqruitement/evaluate">
                         <i class="fa-solid fa-pen-clip"></i>
                         Nilai Pendaftar
