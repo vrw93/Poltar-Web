@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . "/../logic/database.php";
-include __DIR__ . "/../logic/registration/admin/getFullJabatanData.php";
+include __DIR__ . "/../logic/registration/admin/jabatanManager.php";
 
 $admin=true;$login=true;$csrf=true;
 include __DIR__ . "/verifyHelper.php";

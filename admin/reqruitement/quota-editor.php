@@ -6,7 +6,7 @@ include __DIR__ . '/../authHelper.php';
 $currentPage = "daftar panel";
 require_once __DIR__ . "/../../data/adminmenudb.php";
 require_once __DIR__ . "/../../logic/database.php";
-require_once __DIR__ . "/../../logic/registration/admin/getFullJabatanData.php";
+require_once __DIR__ . "/../../logic/registration/admin/jabatanManager.php";
 require_once __DIR__ . "/../../logic/getDataFromDB.php";
 
 #clasess
@@ -89,15 +89,19 @@ $IACount = $getDBData->getGeneralCount(
                     ?>
                     <tr>
                         <td style="text-align: center"><?=$index++?></td>
-                        <td><?=$data['name']?></td>
+                        <td>
+                            <?php if($data['icons'] !== null || $data['icons'] !== ''): ?>
+                            <i class="fa-solid fa-<?=$data['icons']?>"></i>
+                            <?php endif;?>
+                            <?=$data['name']?>
+                        </td>
                         <td style="text-align: center">
                             <?=$data['kouta']?>
                         </td>
                         <td><?=$data['StatusName']?></td>
                         <td style="text-align: right">
                             <a class="no-bg-btn edit-btn" title="Edit"
-                            data-jabatan-id="<?=$data['id']?>"
-                            data-jabatan-name="<?=$data['name']?>">
+                            data-jabatan-id="<?=$data['id']?>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                             <a class="no-bg-btn deactivate" title="Matikan Jabatan"
@@ -155,15 +159,19 @@ $IACount = $getDBData->getGeneralCount(
                     ?>
                     <tr>
                         <td style="text-align: center"><?=$index++?></td>
-                        <td><?=$data['name']?></td>
+                        <td>
+                            <?php if($data['icons'] !== null || $data['icons'] !== ''): ?>
+                            <i class="fa-solid fa-<?=$data['icons']?>"></i>
+                            <?php endif;?>
+                            <?=$data['name']?>
+                        </td>
                         <td style="text-align: center">
                             <?=$data['kouta']?>
                         </td>
                         <td><?=$data['StatusName']?></td>
                         <td style="text-align: right">
                             <a class="no-bg-btn edit-btn" title="Edit"
-                            data-jabatan-id="<?=$data['id']?>"
-                            data-jabatan-name="<?=$data['name']?>">
+                            data-jabatan-id="<?=$data['id']?>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                             <a class="no-bg-btn deactivate" title="Matikan Jabatan"
@@ -192,23 +200,23 @@ $IACount = $getDBData->getGeneralCount(
                 </a>
             </div>
             <div class="itemPanel">
-                    <h2 style="margin:0px">
-                        <i class="fa-solid fa-address-card"></i>
-                        Edit Jabatan [name]
-                        <hr>
-                    </h2>
-                    <form id="editForm" class="VContainer" style="gap:3px">
-                        <p><b>Nama</b>:</p>
-                        <input placeholder="Masukkan Nama Jabatan"
-                        type="text" required value="">
-                        <p><b>Kuota</b>:</p>
-                        <input placeholder="Masukkan Kuota Jabatan"
-                        type="number" required value="" min="1">
-                        <button type="submit" class="teritary-btn">
-                            <i class="fa-solid fa-floppy-disk"></i>
-                            Simpan Perubahan
-                        </button>
-                    </form>
+                <h2 style="margin:0px">
+                    <i class="fa-solid fa-address-card"></i>
+                    Edit Jabatan [name]
+                    <hr>
+                </h2>
+                <form id="editForm" class="VContainer" style="gap:3px">
+                    <p><b>Nama</b>:</p>
+                    <input placeholder="Masukkan Nama Jabatan" name="name"
+                    type="text" required value="">
+                    <p><b>Kuota</b>:</p>
+                    <input placeholder="Masukkan Kuota Jabatan" name="kuota"
+                    type="number" required value="" min="1">
+                    <button type="submit" class="teritary-btn">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Simpan Perubahan
+                    </button>
+                </form>
             </div>
         </dialog>
 
@@ -216,8 +224,9 @@ $IACount = $getDBData->getGeneralCount(
         
         <script src="https://kit.fontawesome.com/c2c5e95263.js" crossorigin="anonymous"></script>
         <script src="/api/js/apiHelper.js" defer></script>
-        <script src="/static/js/admin/jabatan/jabatanEditorDialog.js" defer></script>
-
+        
+        <script type="module" src="/static/js/admin/jabatanEditor/jabatanEditorDialog.js" defer></script>
+        <script type="module" src="/static/js/admin/jabatanEditor/dataManager.js" defer></script>
         <script type="module" src="/static/js/pagination/main.js" defer></script>
     <body>
 </html>

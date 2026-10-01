@@ -1,7 +1,8 @@
 <?php
 include __DIR__ . "/../../../logic/database.php";
-include __DIR__ . "/../../../logic/registration/admin/getFullJabatanData.php";
+include __DIR__ . "/../../../logic/registration/admin/jabatanManager.php";
 
+$admin=true;$login=true;$csrf=true;
 include __DIR__ . "/../../verifyHelper.php";
 
 $data = json_decode(
@@ -33,8 +34,6 @@ if(isset($data['id'])){
     $result = false;
     $msg = "Data Tidak Lengkap";
 }
-$calculate = new CalculatePilihanStatus();
-$calculate->main($database);
 
 header('Content-Type: application/json');
 if($result){
@@ -46,7 +45,7 @@ if($result){
 }else{
     echo json_encode([
         'success' => false,
-        'message' => $result
+        'message' => $msg
     ]);
 }
 ?>
