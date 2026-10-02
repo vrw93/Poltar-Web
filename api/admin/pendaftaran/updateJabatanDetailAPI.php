@@ -38,7 +38,7 @@ if(isset($data['id']) && isset($data['name'])
             try{
                 $jabatanMgr = new jabatanManager($database);
 
-                $detailData = $jabatanMgr->updateJabatanDetailById(
+                $jabatanMgr->updateJabatanDetailById(
                     $id,
                     $name,
                     $kuota,
@@ -65,7 +65,6 @@ if($result){
     echo json_encode([
         'success' => true,
         'message' => $msg,
-        'data' => $detailData
     ]);
 }else{
     echo json_encode([
