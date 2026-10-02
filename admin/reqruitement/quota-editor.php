@@ -105,7 +105,7 @@ $IACount = $getDBData->getGeneralCount(
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                             <a class="no-bg-btn action-btn" title="Matikan Jabatan"
-                            data-jabatan-id="<?=$data['id']?>" data-action="deactivate">
+                            data-jabatan-id="<?=$data['id']?>" data-action="inactive">
                                 <i class="fa-solid fa-lock"></i>
                             </a>
                         </td>
@@ -174,9 +174,9 @@ $IACount = $getDBData->getGeneralCount(
                             data-jabatan-id="<?=$data['id']?>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="no-bg-btn action-btn" title="Matikan Jabatan"
-                            data-jabatan-id="<?=$data['id']?>" data-action="activate">
-                                <i class="fa-solid fa-lock"></i>
+                            <a class="no-bg-btn action-btn" title="hidupkan Jabatan"
+                            data-jabatan-id="<?=$data['id']?>" data-action="active">
+                                <i class="fa-solid fa-unlock"></i>
                             </a>
                         </td>
                     </tr>
@@ -224,6 +224,7 @@ $IACount = $getDBData->getGeneralCount(
         
         <script src="https://kit.fontawesome.com/c2c5e95263.js" crossorigin="anonymous"></script>
         <script src="/api/js/apiHelper.js" defer></script>
+        <script src="/static/js/admin/jabatanEditor/jabatanStateEditor.js" defer></script>
         
         <script type="module" src="/static/js/admin/jabatanEditor/jabatanEditorDialog.js" defer></script>
         <script type="module" src="/static/js/admin/jabatanEditor/dataManager.js" defer></script>

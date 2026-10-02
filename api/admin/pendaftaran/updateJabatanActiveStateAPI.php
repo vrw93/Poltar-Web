@@ -18,7 +18,7 @@ if(isset($data['id']) && isset($data['code'])){
         $code = (string)$data['code'];
         $reject = false;
 
-        if($code !== 'active' || $code !== 'inactive'){
+        if($code !== 'active' && $code !== 'inactive'){
             $reject = true;
             $result = false;
             $msg = "Tipe State Tidak Didukung";
