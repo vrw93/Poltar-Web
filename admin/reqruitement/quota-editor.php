@@ -104,8 +104,8 @@ $IACount = $getDBData->getGeneralCount(
                             data-jabatan-id="<?=$data['id']?>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="no-bg-btn deactivate" title="Matikan Jabatan"
-                            data-jabatan-id="<?=$data['id']?>">
+                            <a class="no-bg-btn action-btn" title="Matikan Jabatan"
+                            data-jabatan-id="<?=$data['id']?>" data-action="deactivate">
                                 <i class="fa-solid fa-lock"></i>
                             </a>
                         </td>
@@ -174,8 +174,8 @@ $IACount = $getDBData->getGeneralCount(
                             data-jabatan-id="<?=$data['id']?>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="no-bg-btn deactivate" title="Matikan Jabatan"
-                            data-jabatan-id="<?=$data['id']?>">
+                            <a class="no-bg-btn action-btn" title="Matikan Jabatan"
+                            data-jabatan-id="<?=$data['id']?>" data-action="activate">
                                 <i class="fa-solid fa-lock"></i>
                             </a>
                         </td>
