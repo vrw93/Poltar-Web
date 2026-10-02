@@ -33,7 +33,7 @@ function saveChoice($database, $Choices, $keahlian, $userId){
     }catch (mysqli_sql_exception $e){
         if($e->getCode() === 1062){
             $pendaftaranId = getPendaftaranIdByUserId($database, $userId);
-            updatePendaftaranById($database, $keahlian, $currentDate, 3, $pendaftaranId);
+            updatePendaftaranById($database, $keahlian, $currentDate, 2, $pendaftaranId);
             updatePilihan($database, $Choices, $pendaftaranId);
             $database->commit();
             return true;
