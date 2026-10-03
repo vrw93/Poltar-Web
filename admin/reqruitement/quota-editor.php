@@ -53,11 +53,17 @@ $IACount = $getDBData->getGeneralCount(
         <?php include __DIR__ . "/../../components/navbar.php"; ?>
 
         <div class="VContainer" style="padding: 5px">
-            <h3 style="text-align:left;">
-                <i class="fa-solid fa-list"></i>List Jabatan Dan Kuota Aktif
-                <hr>
-            </h3>
-
+            <div class="containerH" style="align-items: center; padding: 5px;
+            justify-content: space-between; border-bottom: 1.5px solid var(--color-light);">
+                <h3 style="text-align:left;margin: 0px">
+                    <i class="fa-solid fa-list"></i>List Jabatan Dan Kuota Aktif
+                </h3>
+                <a class="teritary-btn add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Tambah Jabatan
+                </a>
+            </div>
+            
             <div class="overflow-x">
             <table style="min-width: 900px">
                 <thead>
