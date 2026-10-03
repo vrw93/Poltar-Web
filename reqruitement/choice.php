@@ -4,13 +4,14 @@ session_start();
 if(!isset($_SESSION['user_id'])){ header("Location: /login?url=/reqruitement"); exit(); }
 
 require_once __DIR__ . "/../data/menudb.php";
-require_once __DIR__ . "/../logic/registration/getJabatan.php";
+require_once __DIR__ . "/../logic/database.php";
+require_once __DIR__ . "/../logic/registration/admin/jabatanManager.php";
 require_once __DIR__ . "/../logic/registration/saveChoice.php";
 require_once __DIR__ . "/../logic/registration/getChoicesData.php";
 require_once __DIR__ . "/../logic/registration/components/getPendaftaranIdByuserId.php";
 require_once __DIR__ . "/../logic/registration/components/getPendaftaranDataByUserId.php";
-require_once __DIR__ . "/../logic/database.php";
 require_once __DIR__ . "/../logic/getServerStatusByName.php";
+
 $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
 if($reqruitementStatus['statusCode'] == 'reg_closed'){
     $type = 'reg_closed';
@@ -18,11 +19,15 @@ if($reqruitementStatus['statusCode'] == 'reg_closed'){
     exit;
 }
 
+#clases
+$jabatanMgr = new jabatanManager($database);
+
 $userId = $_SESSION['user_id'];
 $pendaftaranData = getPendaftaranDataByUserId($database, $userId);
-$jabatan = getJabatan($database);
 $pendaftaranId = getPendaftaranIdByUserId($database, $userId);
 $savedChoices = getChoiceData($database, $pendaftaranId);
+
+$jabatan = $jabatanMgr->getFullActiveData();
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     if(!isset($_SESSION['user_id'])){ header("Location: /login?url=/registration"); exit(); }
