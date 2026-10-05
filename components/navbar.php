@@ -1,7 +1,9 @@
 <header class="Headerstick">
     <div class="leftSect">
         <img src="/static/image/poltarLogo.webp" alt="poltarIcon">
-        <a href="/"><h2>Poltar Kenshiro</h2></a>
+        <a href="/">
+            <h2 class='webTitle'>Poltar Kenshiro</h2>
+        </a>
     </div>
     <div class="rightSect">
         <ul id="headerNav">
