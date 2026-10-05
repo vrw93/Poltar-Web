@@ -29,13 +29,13 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 | Gallery | `████████████████████` 100% |
 | Home Page | `████████████████████` 100% |
 | Blogs | `███████████████░░░░░` 75% |
-| Recruitment System | `██████████████░░░░░░` 70% |
+| Recruitment System | `███████████████░░░░░` 75% |
 | Admin | `█████████████░░░░░░░` 65% |
 | User Settings | `█████████████░░░░░░░` 65% |
 
 ## 🗺 | Road Map
 > [!NOTE]
-> This Prone To Change
+> This Subject To Change
 
 ### 🛠️ | In Progress
 
