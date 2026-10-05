@@ -354,7 +354,7 @@ h3 {
 .danger-btn:hover {
     cursor: pointer;
     background-color: var(--danger-red-hover);
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 .danger-btn:disabled{

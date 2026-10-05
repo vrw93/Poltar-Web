@@ -73,17 +73,13 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
                         Jumlah Pendaftar Belum Di Nilai : 
                         <?=$getDB->getEvalPenCount($database, 'nEval')?>
                     </p>
-                    <a class="teritary-btn" href="reqruitement/quota-editor">
+                    <a class="teritary-btn" href="reqruitement/">
                         <i class="fa-solid fa-pen-to-square"></i>
-                        Edit Jabatan Dan Kuota
+                        Dashboard Pendaftaran
                     </a>
                     <a class="primary-btn" href="reqruitement/evaluate">
                         <i class="fa-solid fa-pen-clip"></i>
                         Nilai Pendaftar
-                    </a>
-                    <a class="teritary-btn" href="reqruitement/results">
-                        <i class="fa-solid fa-clipboard-list"></i>
-                        Lihat Hasil Pendaftaran
                     </a>
                     
                     <?php 
@@ -92,7 +88,7 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
                         '<i class="fa-solid fa-door-closed"></i> Tutup Pendaftaran'; 
                     ?>
                     
-                    <a class="secondary-btn" id="pendaftaranStateToggleBtn">
+                    <a class="danger-btn" id="pendaftaranStateToggleBtn">
                         <?=$reqBtnVisual?>
                     </a>
                 </div>
