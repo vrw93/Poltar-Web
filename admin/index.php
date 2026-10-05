@@ -71,7 +71,7 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
                     </p>
                     <p>
                         Jumlah Pendaftar Belum Di Nilai : 
-                        <?=$getDB->getEvalPenCount($database, 'nEval')?>
+                        <?=$getDB->getGeneralCount($database, 'pendaftaran', 'isEvaluated')?>
                     </p>
                     <a class="teritary-btn" href="reqruitement/">
                         <i class="fa-solid fa-pen-to-square"></i>
