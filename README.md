@@ -41,8 +41,9 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 
 | Task | Type | Priority | Status |
 |---|---|---|---|
+| Add Reqruitment Result View | 💾 System | 🟩 High | 🟨 WIP |
 | Add Google Auth | 👤 UX | 🟧 Medium | 🟥 HALT |
-| Add Quota Editor | 💾 System | 🟩 High | 🟧 Partialy Implemented |
+| Add Quota Editor | 💾 System | 🟩 High | 🟥 HALT |
 | Add More Animation | ✨ Looks | 🟩 High | ⬛ Not Implemented |
 | Add Blog Comment | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
 | Add Theme | ✨ Looks | 🟧 Medium | ⬛ Not Implemented |
