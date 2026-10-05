@@ -38,7 +38,7 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
         <div class="VContainer">
             <div class="HContainer" style="padding: 30px; padding-bottom:10px; gap: 20px;">
                 <div class="itemPanel" style="min-width: 320px">
-                    <h3>Blogs Summary Panel</h3>
+                    <h3>Panel Dashboard Blog</h3>
                     <p>
                         Jumlah Blog : 
                         <?=$getDB->getGeneralCount($database, 'blog_posts')?>
@@ -50,7 +50,7 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
                     </a>
                 </div>
                 <div class="itemPanel" style="min-width: 320px">
-                    <h3>Gallery Summary Panel</h3>
+                    <h3>Panel Dashboard Galeri</h3>
                     <p>
                         Jumlah Foto :
                         <?=$getDB->getGeneralCount($database, 'gallery_Posts')?>
@@ -64,7 +64,7 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
             </div>
             <div class="HContainer" style="padding: 30px; padding-top:0px; gap: 20px;">
                 <div class="itemPanel" style="gap: 5px;min-width: 320px">
-                    <h3>Pendaftaran</h3>
+                    <h3>Panel Dashboard Pendaftaran</h3>
                     <p>
                         Jumlah Pendaftar : 
                         <?=$getDB->getGeneralCount($database, 'pendaftaran')?>
@@ -81,6 +81,10 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
                         <i class="fa-solid fa-pen-clip"></i>
                         Nilai Pendaftar
                     </a>
+                    <a class="teritary-btn" href="reqruitement/results">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        Lihat Hasil Pendaftaran
+                    </a>
                     
                     <?php 
                     $reqBtnVisual = $reqruitementStatus['statusCode'] == 'reg_closed' ? 
@@ -93,7 +97,7 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
                     </a>
                 </div>
                 <div class="itemPanel" style="gap: 5px;min-width: 320px">
-                    <h3>User</h3>
+                    <h3>Panel Dashboard Pengguna</h3>
                     <p>
                         Belum Diverifikasi : 
                         <?=$getDB->getGeneralCount($database, 'pendaftaran', 'unverified')?>
@@ -118,7 +122,7 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
             </div>
         </div>
         
-        <?php include "../components/footer.php"; ?>
+        <?php include __DIR__ . "/../components/footer.php"; ?>
 
         <script>
             let pendaftaranState = '<?=$reqruitementStatus['statusCode']?>';
