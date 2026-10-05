@@ -5,8 +5,9 @@ require_once __DIR__ . "/../logic/database.php";
 $needCSRF = $csrf ?? true;
 $needLogin = $login ?? true;
 $needAdmin = $admin ?? true;
+$requestMethod = $method ?? 'POST';
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+if ($_SERVER['REQUEST_METHOD'] !== $requestMethod) {
     http_response_code(404);
     exit();
 }
@@ -18,7 +19,7 @@ if ($needLogin) {
     }
 }
 
-if ($needCSRF) {
+if ($needCSRF && $requestMethod !== 'GET') {
     $token = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
 
     if (

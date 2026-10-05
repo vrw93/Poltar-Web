@@ -1,4 +1,6 @@
-async function api(url, csrfToken, data = null, debugMode = false) {
+async function api(
+    url, csrfToken, data = null, debugMode = false, file = false
+) {
     const response = await fetch(url, {
         method: data ? "POST" : "GET",
         headers: {
@@ -13,5 +15,8 @@ async function api(url, csrfToken, data = null, debugMode = false) {
         console.log(result);
     }
 
+    if(file){
+        return await response.blob();
+    }
     return await response.json();
 }
