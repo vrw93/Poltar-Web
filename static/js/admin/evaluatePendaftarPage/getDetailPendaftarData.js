@@ -1,16 +1,18 @@
 const detailDialog = document.getElementById('detailDialog');
-const dataDetailUi = detailDialog.querySelector('.dataDetail');
-const keahlianUi = document.getElementById('keahlianDetail');
+let itemPanel = detailDialog.querySelector('.itemPanel');
 
 async function updateDetailUi(id){
-    dataDetailUi.innerHTML = '<p>Loading...</p>';
-    keahlianUi.innerText = 'Loading...';
+    const oldUi = itemPanel.innerHTML;
+    loadingDetailUI();
 
     const timeStart = performance.now();
     await checkDataAvibilty(id);
     const timeStop = performance.now();
     console.log(`Fetch Time: ${timeStop - timeStart}`);
 
+    itemPanel.innerHTML = oldUi;
+    const keahlianUi = document.getElementById('keahlianDetail');
+    const dataDetailUi = detailDialog.querySelector('.dataDetail');
     const data = userData[id];
 
     dataDetailUi.innerHTML = `
@@ -22,22 +24,45 @@ async function updateDetailUi(id){
     keahlianUi.innerText = data.keahlian || 'Siswa Tidak Menambahkan Detail Keahlian';
 }
 
-async function checkDataAvibilty(id){
-    if(!(id in userData)){
-        const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
-        const result = await api(
-            '/api/admin/pendaftaran/getDetailPendaftaranDataByIdAPI.php',
-            csrfToken,
-            {
-                pendaftaranId: id
-            }
-        );
+function loadingDetailUI(){
+    itemPanel.innerHTML = `
+        <h2 style="margin:0px">
+            <i class="fa-solid fa-address-card"></i>
+            Edit Jabatan
+            <hr>
+        </h2>
+        <div class="VContainer">
+            <div style="text-align: center;font-size: 2rem;
+            margin-top: 50px; margin-bottom: 50px">
+                <div style="animation: spining 1.5s linear infinite">
+                    <i class="fa-solid fa-rotate fa-2xl"></i>
+                </div>
+                <br>
+                Loading...
+            </div>
+        </div>`;
+}
 
-        if(result.success){
-            userData[id] = result.data;
-        }else{
-            alert(result.message);
+async function checkDataAvibilty(id){
+    try{
+        if(!(id in userData)){
+            const csrfToken = document.querySelector('meta[name="csrf_token"]').content;
+            const result = await api(
+                '/api/admin/pendaftaran/getDetailPendaftaranDataByIdAPI.php',
+                csrfToken,
+                {
+                    pendaftaranId: id
+                }
+            );
+
+            if(result.success){
+                userData[id] = result.data;
+            }else{
+                alert(result.message);
+            }
         }
+    }catch(e){
+        console.error(e);
     }
 }
 
