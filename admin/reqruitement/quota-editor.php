@@ -40,7 +40,6 @@ $IACount = $getDBData->getGeneralCount(
         <link rel="stylesheet" href="/static/css/mainStyle.css">
         <link rel="stylesheet" href="/static/css/theme.css">
         <link rel="stylesheet" href="/static/css/layout.css">
-        <link rel="stylesheet" href="/static/css/evaluateDialog.css">
         <link rel="stylesheet" href="/static/css/registration.css">
         <link rel="stylesheet" href="/static/css/animation.css">
         <link rel="icon" type="image/x-icon" href="/static/image/poltarFav.ico">
