@@ -229,7 +229,10 @@ $unverifiedData = $buildEvaluateData->getUnverifiedData($database, $limit);
                     <span>Mendaftar Pada</span><span>:</span><span>[createdAt]</span>
                 </div>
                 <p style="margin-top: 8px">Keahlian : </p>
-                <p id="keahlianDetail">[keahlian]</p>
+                <p id="keahlianDetail" class="itemPanel"
+                style="background-color:var(--color-bg-primary)">
+                    [keahlian]
+                </p>
             </div>
         </dialog>
 
