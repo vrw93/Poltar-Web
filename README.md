@@ -41,10 +41,11 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 
 | Task | Type | Priority | Status |
 |---|---|---|---|
-| Add Reqruitment Result View | 💾 System | 🟩 High | 🟨 WIP |
+| Add Users Dashboard | 👤 UX | 🟧 Medium | 🟨 WIP |
 | Add Google Auth | 👤 UX | 🟧 Medium | 🟥 HALT |
 | Add Quota Editor | 💾 System | 🟩 High | 🟥 HALT |
 | Add More Animation | ✨ Looks | 🟩 High | ⬛ Not Implemented |
+| Add Reqruitement Dashboard | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
 | Add Blog Comment | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
 | Add Theme | ✨ Looks | 🟧 Medium | ⬛ Not Implemented |
 | Add Blog Author And View Count | 💾 System | 🟧 Medium | ⬛ Not Implemented |
@@ -55,6 +56,7 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 
 | Task | Type | Priority | Status |
 |---|---|---|---|
+| Add Reqruitment Result View | 💾 System | 🟩 High | 🟩 Implemented |
 | Add Role Feature | 💾 System | 🟩 High | 🟩 Implemented |
 | Add Users Search | 🎯 QOL | 🟩 High | 🟩 Implemented |
 ## 📑 | License
