@@ -431,6 +431,12 @@ h3 {
 }
 
 /*responsive*/
+@media (max-width: 400px) {
+    .Headerstick .webTitle{
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     #mainPageBody{
         background-size: 300%;
