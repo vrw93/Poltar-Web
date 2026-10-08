@@ -17,8 +17,8 @@ $menus = [
     ],
     [
         "name" => '<i class="fa-solid fa-user-plus"></i> Pendaftaran',
-        "link" => "/admin/reqruitement/evaluate",
-        "id" => "daftar panel"
+        "link" => "/admin/reqruitement",
+        "id" => "daftar dashboard"
     ]
 ]
 ?>
