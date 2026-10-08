@@ -41,19 +41,6 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
 
         <div class="containerV" style="padding: 15px;gap: 15px;">
             <div class="containerH" style="gap: 15px;">
-                <div class="itemPanel">
-                    <h3 style="text-align: left">
-                        <i class="fa-solid fa-chart-column"></i>
-                        Statistik Dasar Pendaftaran
-                        <hr>
-                    </h3>
-                    <div class="dataDetail" style="grid-template-columns: 260px 10px auto;">
-                        <span><i class="fa-solid fa-users"></i> Jumlah Pendaftar</span><span>:</span><span><?=$penCount?></span>
-                        <span><i class="fa-solid fa-user-clock"></i> Pendaftar Belum Diverifikasi</span><span>:</span><span><?=$unverifyPenCount?></span>
-                        <span><i class="fa-solid fa-user-clock"></i> Pendaftar Belum Dinilai</span><span>:</span><span><?=$unevaluatedPenCount?></span>
-                        <span><i class="fa-solid fa-user-check"></i> Pendaftar Diterima</span><span>:</span><span><?=$acceptedPenCount?></span>
-                    </div>
-                </div>
                 <div class="itemPanel" style="gap: 5px">
                     <h3 style="text-align: left">
                         <i class="fa-solid fa-screwdriver-wrench"></i>
@@ -82,6 +69,19 @@ $reqruitementStatus = getServerStatusByName($database, 'reqruitementPage');
                     <a class="danger-btn" id="pendaftaranStateToggleBtn">
                         <?=$reqBtnVisual?>
                     </a>
+                </div>
+                <div class="itemPanel">
+                    <h3 style="text-align: left">
+                        <i class="fa-solid fa-chart-column"></i>
+                        Statistik Dasar Pendaftaran
+                        <hr>
+                    </h3>
+                    <div class="dataDetail" style="grid-template-columns: 260px 10px auto;">
+                        <span><i class="fa-solid fa-users"></i> Jumlah Pendaftar</span><span>:</span><span><?=$penCount?></span>
+                        <span><i class="fa-solid fa-user-clock"></i> Pendaftar Belum Diverifikasi</span><span>:</span><span><?=$unverifyPenCount?></span>
+                        <span><i class="fa-solid fa-user-clock"></i> Pendaftar Belum Dinilai</span><span>:</span><span><?=$unevaluatedPenCount?></span>
+                        <span><i class="fa-solid fa-user-check"></i> Pendaftar Diterima</span><span>:</span><span><?=$acceptedPenCount?></span>
+                    </div>
                 </div>
             </div>
         </div>
