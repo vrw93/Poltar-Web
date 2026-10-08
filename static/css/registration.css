@@ -2,10 +2,12 @@
     background: none;
     outline: none;
     border: none;
+    transition: .3s ease;
 }
 
 .no-bg-btn:hover{
     color: var(--text-secondary);
+    cursor: pointer;
 }
 
 .selfNameClass{
