@@ -23,10 +23,10 @@ if(isset($data['id']) && isset($data['name']) && isset($data['priority'])
         $icons = (string)htmlspecialchars($data['icons']);
         $reject = false;
 
-        if($kuota <= 0){
+        if($kuota <= 0 || $priority <= 0){
             $reject = true;
             $result = false;
-            $msg = "Kuota Tidak Boleh Kurang Dari 1";
+            $msg = "Kuota/Priority Tidak Boleh Kurang Dari 1";
         }
 
         if(mb_strlen($name, 'UTF-8') > 100 || mb_strlen($icons, 'UTF-8') > 30){
