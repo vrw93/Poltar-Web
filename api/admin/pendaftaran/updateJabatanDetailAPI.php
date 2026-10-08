@@ -12,12 +12,13 @@ $data = json_decode(
 
 $result = false;
 
-if(isset($data['id']) && isset($data['name']) 
+if(isset($data['id']) && isset($data['name']) && isset($data['priority']) 
     && isset($data['kuota']) && isset($data['icons'])){
-    if(is_numeric($data['id']) && is_string($data['name'])
+    if(is_numeric($data['id']) && is_string($data['name']) && is_numeric($data['priority'])
         && is_numeric($data['kuota']) && is_string($data['icons'])){
         $id = (int)$data['id'];
         $kuota = (int)$data['kuota'];
+        $priority = (int)$data['priority'];
         $name = (string)htmlspecialchars($data['name']);
         $icons = (string)htmlspecialchars($data['icons']);
         $reject = false;
@@ -42,7 +43,8 @@ if(isset($data['id']) && isset($data['name'])
                     $id,
                     $name,
                     $kuota,
-                    $icons
+                    $icons,
+                    $priority
                 );
                 $result = true;
                 $msg = "Berhasil Memperbarui Data";
