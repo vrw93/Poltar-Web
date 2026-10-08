@@ -27,6 +27,7 @@ async function editJabatanSubmit(event, id){
     const kuota = parseInt(data.kuota, 10);
     const name = data.name;
     const icons = data.icons;
+    const priority = data.priority;
     
     if(isNaN(kuota) || kuota < 1){
         alert('Kuota harus berupa angka dan lebih besar dari 0.');
@@ -43,6 +44,7 @@ async function editJabatanSubmit(event, id){
             {
                 id: id,
                 name: name,
+                priority: priority,
                 kuota: kuota,
                 icons: icons
             }
@@ -112,9 +114,18 @@ function updateUI(data){
             <p style="color:var(--color-text-secondary)"><b>Nama</b>:</p>
             <input placeholder="Masukkan Nama Jabatan" name="name"
             type="text" required value="${data.name}">
-            <p style="color:var(--color-text-secondary)"><b>Kuota</b>:</p>
-            <input placeholder="Masukkan Kuota Jabatan" name="kuota"
-            type="number" required value="${data.kouta ?? data.kuota}" min="1">
+            <div class="containerHImune" style="justify-contents:flex-start">
+                <div style="flex-grow: 1">
+                    <p style="color:var(--color-text-secondary)"><b>Kuota</b>:</p>
+                    <input placeholder="Masukkan Kuota Jabatan" name="kuota"
+                    type="number" required value="${data.kouta ?? data.kuota}" min="1">
+                </div>
+                <div style="flex-grow: 1">
+                    <p style="color:var(--color-text-secondary)"><b>Tingkat Jabatan</b>:</p>
+                    <input placeholder="Masukkan Tingkat Jabatan" name="priority"
+                    type="number" required value="${data.priority}" min="1">
+                </div>
+            </div>
             <p style="color:var(--color-text-secondary)"><b>Ikon</b>:</p>
             <small style="max-width: 500px;">
                 Ikon dapat diambil atau dicari di 
