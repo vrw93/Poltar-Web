@@ -41,13 +41,13 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 
 | Task | Type | Priority | Status |
 |---|---|---|---|
-| Add Quota Editor | 💾 System | 🟩 High | 🟨 WIP |
+| Add More Animation | ✨ Looks | 🟩 High | 🟨 WIP |
 | Add Users Dashboard | 👤 UX | 🟧 Medium | 🟧 Half Implemented |
 | Add Google Auth | 👤 UX | 🟧 Medium | 🟥 HALT |
-| Add More Animation | ✨ Looks | 🟩 High | ⬛ Not Implemented |
-| Add Reqruitement Dashboard | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
+| Add Blog Slug | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
 | Add Blog Comment | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
 | Add Theme | ✨ Looks | 🟧 Medium | ⬛ Not Implemented |
+| Add Website Sitemap | 💾 System | 🟧 Medium | ⬛ Not Implemented |
 | Add Blog Author And View Count | 💾 System | 🟧 Medium | ⬛ Not Implemented |
 | Add Password Complexity Check | 🔑 Security | 🟧 Medium | ⬛ Not Implemented |
 | Add Site Setting | 💾 System | 🟧 Medium | ⬛ Not Implemented |
@@ -56,6 +56,8 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 
 | Task | Type | Priority | Status |
 |---|---|---|---|
+| Add Reqruitement Dashboard | 👤 UX | 🟧 Medium | 🟩 Implemented |
+| Add Quota Editor | 💾 System | 🟩 High | 🟩 Implemented |
 | Add Reqruitment Result View | 💾 System | 🟩 High | 🟩 Implemented |
 | Add Role Feature | 💾 System | 🟩 High | 🟩 Implemented |
 | Add Users Search | 🎯 QOL | 🟩 High | 🟩 Implemented |
