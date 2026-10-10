@@ -225,10 +225,73 @@ $IACount = $getDBData->getGeneralCount(
             </div>
         </dialog>
 
+        <dialog id="createDialog" class="popup">
+            <div class="tr-anchor" style="top: 20px; right:20px; padding: 2px">
+                <a class="no-bg-btn add-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </div>
+            <div class="itemPanel">
+                <h2 style="margin:0px">
+                    <i class="fa-solid fa-address-card"></i>
+                    Buat Jabatan Baru
+                    <hr>
+                </h2>
+                <form id="createForm" class="VContainer" style="gap:3px">
+                    <p style="color:var(--color-text-secondary)"><b>Nama</b>:</p>
+                    <input placeholder="Masukkan Nama Jabatan" name="name"
+                    type="text" required>
+                    <div class="containerHImune" style="justify-contents:flex-start">
+                        <div style="flex-grow: 1">
+                            <p style="color:var(--color-text-secondary)"><b>Kuota</b>:</p>
+                            <input placeholder="Masukkan Kuota Jabatan" name="kuota"
+                            type="number" required value="1" min="1">
+                        </div>
+                        <div style="flex-grow: 1">
+                            <p style="color:var(--color-text-secondary)"><b>Tingkat Jabatan</b>:</p>
+                            <input placeholder="Masukkan Tingkat Jabatan" name="priority"
+                            type="number" required value="1" min="1">
+                        </div>
+                    </div>
+                    <p style="color:var(--color-text-secondary)"><b>Ikon</b>:</p>
+                    <small style="max-width: 500px;">
+                        Ikon dapat diambil atau dicari di 
+                        <a href="https://fontawesome.com/search?ic=free-collection" target="_blank"
+                        style="color:var(--color-text-secondary); text-decoration: underline">
+                            Font Awesome
+                        </a>.
+                        <br>
+                        Silahkan memasukkan <b>nama ikon</b> yang ingin digunakan tanpa awalan "fa-"
+                        atau "&lt;i class='fa-solid fa-house'&gt;&lt;/i&gt;" contoh: "house" atau "users".
+                    </small>
+                    <div class="containerHImune" style="justify-content: flex-start;
+                    align-items: center; gap:10px">
+                        <div style="flex-grow: 1;">
+                            <p><b>Nama Ikon</b>:</p>
+                            <input placeholder="Masukkan Ikon Jabatan" name="icons"
+                            type="text" style="width: 90%">
+                        </div>
+                        <div>
+                            <p><b>Preview Ikon</b>:</p>
+                            <div class="itemPanel" id="iconPreview"
+                            style="padding: 5px; align-items: center;">
+                                <i class="fa-solid fa-circle-question fa-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="teritary-btn">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Buat Jabatan
+                    </button>
+                </form>
+            </div>
+        </dialog>
+
         <?php include __DIR__ . "/../../components/footer.php"; ?>
         
         <script src="https://kit.fontawesome.com/c2c5e95263.js" crossorigin="anonymous"></script>
         <script src="/api/js/apiHelper.js" defer></script>
+        <script src="/static/js/admin/jabatanEditor/createJabatanDialog.js" defer></script>
         <script src="/static/js/admin/jabatanEditor/jabatanStateEditor.js" defer></script>
         
         <script type="module" src="/static/js/admin/jabatanEditor/jabatanEditorDialog.js" defer></script>
