@@ -41,12 +41,12 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 
 | Task | Type | Priority | Status |
 |---|---|---|---|
-| Add More Animation | ✨ Looks | 🟩 High | 🟨 WIP |
+| Add Theme | ✨ Looks | 🟧 Medium | 🟨 WIP |
+| Add More Animation | ✨ Looks | 🟩 High | 🟧 Half Implemented |
 | Add Users Dashboard | 👤 UX | 🟧 Medium | 🟧 Half Implemented |
 | Add Google Auth | 👤 UX | 🟧 Medium | 🟥 HALT |
 | Add Blog Slug | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
 | Add Blog Comment | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
-| Add Theme | ✨ Looks | 🟧 Medium | ⬛ Not Implemented |
 | Add Website Sitemap | 💾 System | 🟧 Medium | ⬛ Not Implemented |
 | Add Blog Author And View Count | 💾 System | 🟧 Medium | ⬛ Not Implemented |
 | Add Password Complexity Check | 🔑 Security | 🟧 Medium | ⬛ Not Implemented |
