@@ -156,9 +156,9 @@ $title = "Poltar Web";
             </div>
         </div>
 
-        <?php include "components/galleryView.php"; ?>
+        <?php include __DIR__ . "/components/galleryView.php"; ?>
 
-        <?php include "components/footer.php"; ?>
+        <?php include __DIR__ . "/components/footer.php"; ?>
         
         <script src="https://kit.fontawesome.com/c2c5e95263.js" defer crossorigin="anonymous"></script>
         <script src="static/js/main.js" defer></script>

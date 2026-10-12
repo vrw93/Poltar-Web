@@ -1,8 +1,11 @@
 <dialog id="galleryView">
     <div class="imageDetail">
-        <button onclick="toggleGalleryView();">
-            <i class="fa-solid fa-x fa-xl"></i>
-        </button>
+        <div class="tr-anchor">
+            <button onclick="toggleGalleryView();" class="no-bg-btn" 
+            style="color: var(--color-light)">
+                <i class="fa-solid fa-x fa-xl"></i>
+            </button>
+        </div>
         <div class="modal-content">
             <img src="https://github.io">
             <h3>lorem ipsum</h3>

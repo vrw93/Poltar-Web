@@ -34,9 +34,7 @@
 
 .imageDetail { 
   background-color: var(--bg-overlay); 
-  margin: 50px; 
-  padding: 30px; 
-  padding-right: 50px;
+  padding: 10px; 
   position: relative; 
   display: flex; 
   flex-direction: column; 
@@ -82,23 +80,8 @@
   color: var(--text-secondary); 
 }
 
-.imageDetail button { 
-  background: none; 
-  border: 2px solid transparent; 
-  position: absolute; 
-  top: 20px; 
-  right: 20px;
-  transform: translate(50%, -50%);
-  color: white; 
-  padding: 10px; 
-  transition: all 0.3s ease-in-out; 
-  cursor: pointer;
-  z-index: 10; 
-} 
-
-.imageDetail button:hover { 
-  border-color: var(--accent-gold); 
-  border-radius: 25px; 
+.imageDetail .no-bg-btn:hover { 
+  transform: rotate(90deg);
 }
 
 .galleryContainer {
@@ -109,7 +92,7 @@
 }
 
 .galleryItem:hover{
-  transform: scale(1.1);
+  transform: scale(1.07);
 }
 
 .galleryItem{

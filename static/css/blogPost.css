@@ -41,7 +41,9 @@
 }
 
 .blogContainer:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px)
+        rotate(1deg);
+    box-shadow: 2px 5px 15px 5px var(--color-black);
 }
 
 .blogContainer {
@@ -50,7 +52,7 @@
     margin: 10px;
     min-width: 300px;
     max-width: 350px;
-    background-color: var(--bg-card);
+    background-color: var(--color-bg-card);
     border: 1px solid var(--accent-gold);
     border-radius: 20px;
     transition: 0.3s ease;
