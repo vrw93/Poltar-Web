@@ -38,3 +38,4 @@
 </footer>
 
 <script src="/static/js/humburgerSwitch.js"></script>
+<script src="/static/js/themeSwitch.js"></script>

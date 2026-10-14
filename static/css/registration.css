@@ -4,39 +4,39 @@
 }
 
 .tableKelas{
-    background-color: var(--accent-light-blue);
+    background-color: var(--color-light-immune-blue);
     padding: 1px 5px;
     border-radius: 10px;
-    color: var(--accent-light);
+    color: var(--color-light-immune);
 }
 
 .tableSekor{
     background-color: var(--accent-dark-green);
     padding: 1px 5px;
-    color: var(--accent-light);
+    color: var(--color-light-immune);
     border-radius: 10px;
 }
 
 .tableStatus.accepted{
     background-color: var(--accent-green);
-    border-color: var(--accent-light);
-    color: var(--accent-light);
+    border-color: var(--color-light-immune);
+    color: var(--color-light-immune);
 }
 
 .tableStatus.displaced, .tableStatus.partialy{
     background-color: var(--accent-orange);
-    border-color: var(--accent-light);
-    color: var(--accent-light);
+    border-color: var(--color-light-immune);
+    color: var(--color-light-immune);
 }
 
 .tableStatus.reject, .tableStatus.rejected, .tableStatus.cancel{
     background-color: var(--danger-red);
-    border-color: var(--accent-light);
-    color: var(--accent-light);
+    border-color: var(--color-light-immune);
+    color: var(--color-light-immune);
 }
 
 .tableStatus{
-    border: 1px solid var(--accent-light);
+    border: 1px solid var(--color-light-immune);
     border-radius: 10px;
     padding: 1px 5px;
 }
@@ -52,7 +52,7 @@ form input{
     border: 1px solid var(--accent-yellow);
     border-radius: 15px;
     background-color: var(--bg-secondary);
-    color: var(--accent-light);
+    color: var(--color-light-immune);
 }
 
 form select {
@@ -61,14 +61,14 @@ form select {
     border: 1px solid var(--accent-yellow);
     border-radius: 10px;
     background-color: var(--bg-secondary);
-    color: var(--accent-light);
+    color: var(--color-light-immune);
     flex-grow: unset;
     width: fit-content;
 }
 
 form textarea {
     background-color: var(--bg-secondary);
-    color: var(--accent-light);
+    color: var(--color-light-immune);
     padding: 10px;
     border: 1px solid var(--accent-yellow);
     border-radius: 15px;

@@ -13,11 +13,11 @@ a {
 
 #mainPageBody {
     background-image: url('/static/image/BG1.webp');
-    background-color: var(--bg-primary);
+    background-color: var(--color-bg-primary);
     background-size: 100%;
     background-position: top center;
     background-repeat: no-repeat;
-    color: var(--text-primary);
+    color: var(--color-text-primary);
     font-family: "Poppins", "Arial", "arial", "sans-serif", "courier new";
     font-size: 1rem;
     margin: 0px;
@@ -27,14 +27,15 @@ a {
 }
 
 Body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
     font-family: "Poppins", "Arial", "arial", "sans-serif", "courier new";
     font-size: 1rem;
     margin: 0px;
     padding: 0px;
     display: flex;
     flex-direction: column;
+    transition: .3s ease;
 }
 /* Sliders */
 ::-webkit-scrollbar {
@@ -46,13 +47,13 @@ Body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--slider-thumb);
+    background: var(--color-slider-thumb);
     border-radius: 20px;
     backdrop-filter: blur(5px);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--slider-thumb-hover);
+    background: var(--color-slider-thumb-hover);
 }
 
 /* Footers */
@@ -64,7 +65,8 @@ Body {
     justify-content: center;
     gap: 100px;
     background-color: var(--bg-footer-header);
-    border-top: 2px solid var(--accent-gold);
+    border-top: 2px solid var(--color-accent-gold);
+    transition: .3s ease;
 }
 
 .footers h2 {
@@ -84,7 +86,7 @@ Body {
 }
 
 .footers .nameCardF h3 {
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     font-size: 1.1rem;
     margin: 0px;
     text-align: left;
@@ -92,7 +94,7 @@ Body {
 
 .footers .nameCardF small {
     margin-top: 20px;
-    color: var(--text-tertiary)
+    color: var(--color-text-tertiary)
 }
 
 .footers h2 {
@@ -112,12 +114,12 @@ Body {
 }
 
 .footers .navbarF a {
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     font-weight: bold;
 }
 
 .footers .nameCardF p {
-    color: var(--text-secondary)
+    color: var(--color-text-secondary)
 }
 
 /* Header */
@@ -129,11 +131,12 @@ Body {
     height: 30px;
     padding: 20px;
     background: var(--bg-footer-header);
-    border-bottom: 2px solid var(--accent-gold);
+    border-bottom: 2px solid var(--color-accent-gold);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    transition: .3s ease;
 }
 
 .Headerstick h2 {
@@ -178,12 +181,12 @@ Body {
     background: none;
     border: none;
     outline: none;
-    color: var(--text-primary);
+    color: var(--color-text-primary);
     transition: color 0.3s ease;
 }
 
 .Headerstick .rightSect .humburger:hover{
-    color: var(--accent-gold);
+    color: var(--color-accent-gold);
 }
 
 .navlink::after {
@@ -193,7 +196,7 @@ Body {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: var(--accent-gold);
+    background-color: var(--color-accent-gold);
     transition: width 0.3s;
 }
 
@@ -205,8 +208,8 @@ Body {
     font-family: "Poppins", "sans-serif", "courier new";
     background: var(--bg-footer-header);
     outline: none;
-    color: var(--text-primary);
-    border: 2px solid var(--accent-gold);
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-accent-gold);
     width: 40px;
     height: 40px;
     margin:0px;
@@ -224,7 +227,7 @@ Body {
     gap: 10px;
     padding: 10px;
     border-radius: 15px;
-    border: 1px solid var(--accent-gold);
+    border: 1px solid var(--color-accent-gold);
     
     visibility: hidden;
     opacity: 0;
@@ -277,7 +280,7 @@ h3 {
 }
 
 .description{
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     font-size: 1rem;
 }
 
@@ -285,7 +288,7 @@ h3 {
 .primary-btn:hover {
     cursor: pointer;
     background-color: var(--accent-yellow);
-    color: var(--accent-dark);
+    color: var(--color-black);
     transform: scale(1.03);
 }
 
@@ -293,8 +296,8 @@ h3 {
     font-family: "Poppins", "sans-serif", "courier new";
     font-size: 1.1rem;
     font-weight: bold;
-    background-color: var(--accent-gold);
-    color: var(--accent-dark);
+    background-color: var(--color-accent-gold);
+    color: var(--color-black);
     padding: 15px 25px;
     border: none;
     border-radius: 20px;
@@ -303,8 +306,8 @@ h3 {
 
 .secondary-btn:hover {
     cursor: pointer;
-    border-color: var(--accent-gold);
-    color: var(--accent-gold);
+    border-color: var(--color-accent-gold);
+    color: var(--color-accent-gold);
     transform: scale(1.03);
 }
 
@@ -313,8 +316,8 @@ h3 {
     font-size: 1.1rem;
     font-weight: bold;
     background-color: transparent;
-    border: 2px solid var(--accent-light);
-    color: var(--accent-light);
+    border: 2px solid var(--color-light);
+    color: var(--color-light);
     padding: 15px 25px;
     border-radius: 20px;
     transition: 0.3s ease;
@@ -324,8 +327,8 @@ h3 {
     font-family: "Poppins", "sans-serif", "courier new";
     font-size: 1.1rem;
     font-weight: bold;
-    background-color: var(--accent-light-blue);
-    color: var(--accent-light);
+    background-color: var(--color-accent-blue);
+    color: var(--color-light-immune);
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -334,7 +337,7 @@ h3 {
 
 .teritary-btn:hover {
     cursor: pointer;
-    background-color: var(--accent-grey);
+    background-color: var(--color-grey);
     transform: scale(1.03);
 }
 
@@ -342,8 +345,8 @@ h3 {
     font-family: "Poppins", "sans-serif", "courier new";
     font-size: 1.1rem;
     font-weight: bold;
-    background-color: var(--danger-red);
-    color: var(--accent-light);
+    background-color: var(--color-danger);
+    color: var(--color-light-immune);
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -353,7 +356,7 @@ h3 {
 
 .danger-btn:hover {
     cursor: pointer;
-    background-color: var(--danger-red-hover);
+    background-color: var(--color-danger-hover);
     transform: scale(1.03);
 }
 
@@ -368,7 +371,7 @@ h3 {
 
 .edit-btn:hover{
     cursor: pointer;
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
 }
 
 .containerButtons:hover{
@@ -380,8 +383,8 @@ h3 {
 .containerButtons {
     max-width: 250px;
     padding: 20px;
-    border: 2px solid var(--accent-gold);
-    background-color: var(--bg-card);
+    border: 2px solid var(--color-accent-gold);
+    background-color: var(--color-bg-card);
     border-radius: 25px;
     transition: 0.5s ease;
 }
@@ -392,7 +395,7 @@ h3 {
 }
 
 .containerButtons p {
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     font-size: 0.9rem;
 }
 
@@ -404,7 +407,7 @@ h3 {
 }
 
 .no-bg-btn:hover{
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     cursor: pointer;
 }
 
@@ -433,7 +436,7 @@ h3 {
     border: none;
     outline: none;
     padding: 20px;
-    color: white;
+    color: var(--color-text-primary);
 }
 
 .dataDetail{
@@ -480,7 +483,7 @@ h3 {
         padding: 10px;
         gap: 10px;
         border-radius: 15px;
-        border: 1px solid var(--accent-gold);
+        border: 1px solid var(--color-accent-gold);
         text-align: left;
 
         width: 150px;

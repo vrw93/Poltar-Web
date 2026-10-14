@@ -5,7 +5,7 @@ const userBtn = document.getElementById('userBtn');
 
 humburger.addEventListener('click', () =>{
     header.classList.toggle("active");
-    if(userMenu.classList.contains('active')){
+    if(userMenu?.classList.contains('active')){
         userMenu.classList.remove('active');
     }
 });
@@ -13,7 +13,7 @@ humburger.addEventListener('click', () =>{
 if(userBtn !== null){
     userBtn.addEventListener('click', () => {
         userMenu.classList.toggle('active');
-        if(header.classList.contains('active')){
+        if(header?.classList.contains('active')){
             header.classList.remove('active');
         }
     });

@@ -23,6 +23,7 @@
     border: 1px solid var(--accent-gold);
     border-radius: 20px;
     padding: 20px;
+    transition: .3s ease;
 }
 
 .itemPanel p {
@@ -158,6 +159,8 @@ table {
     table-layout: fixed;
     border-radius: 20px;
     overflow: hidden;
+    color: var(--color-light-immune);
+    transition: .3s ease;
 }
 
 th, td{

@@ -17,6 +17,12 @@
                     
                 <?php endif; ?>
             <?php endforeach; ?>
+            <li>
+                <a class="navlink no-bg-btn" id="themeSwitchBtn">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Light
+                </a>
+            </li>
         </ul>
         <div>
             <?php if(!isset($_SESSION['user_id'])): ?>

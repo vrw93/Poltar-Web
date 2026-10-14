@@ -27,6 +27,18 @@ $title = "Poltar Web";
         <link rel="stylesheet" href="static/css/layout.css">
         <link rel="icon" type="image/x-icon" href="/static/image/poltarFav.ico">
         <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+        <style>
+            #viewMoreGalleryBtn {
+                border: 2px solid var(--color-light-immune);
+                color: var(--color-light-immune);
+            }
+            @media (max-width: 768px) {
+                #viewMoreGalleryBtn {
+                    border: 2px solid var(--color-light) !important;
+                    color: var(--color-light) !important;
+                }
+            }
+        </style>
     </head>
     <body id="mainPageBody">
         <div class="containerH">
@@ -34,7 +46,7 @@ $title = "Poltar Web";
                 <img src="/static/image/poltarLogo.webp" alt="poltarIcon" style="max-width: 55%;">
             </div>
             <div style="max-width: 500px;">
-                <h1>
+                <h1 style="color: white">
                     POLISI TARUNA <br> 
                     <span style="color: var(--accent-yellow)">SMK NEGERI 1 GIRITONTRO</span>
                 </h1>
@@ -45,14 +57,14 @@ $title = "Poltar Web";
                     <span style="color: white">&bull;</span>
                     <span>BERKARAKTER</span>
                 </h2>
-                <p class="description" style="margin-bottom: 30px;">
+                <p class="description" style="margin-bottom: 30px;color: #CBD5E1">
                     Membentuk generasi muda yang disiplin, bertanggung jawab,
                     serta berjiwa kepemimpinan untuk masa depan yang lebih baik.
                 </p>
 
                 <div class="containerH" style="gap: 20px; justify-content:left">
                     <a href="/reqruitement" class="primary-btn" ><i class="fa-solid fa-user-plus"></i> DAFTAR SEKARANG</a>
-                    <a href="#gallery" class="secondary-btn"><i class="fa-solid fa-images"></i> LIHAT GALERI</a>
+                    <a href="#gallery" class="secondary-btn" id='viewMoreGalleryBtn'><i class="fa-solid fa-images"></i> LIHAT GALERI</a>
                 </div>
             </div>
         </div>
@@ -93,7 +105,7 @@ $title = "Poltar Web";
             </a>
         </div>
 
-        <?php include "components/navbar.php" ?>
+        <?php include __DIR__ . "/components/navbar.php" ?>
 
         <div class="secondaryBG" id="Blogs">
             <h2 style="margin-top: 50px;">INFORMASI TERBARU</h2>
