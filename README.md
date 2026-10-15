@@ -42,7 +42,7 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 | Task | Type | Priority | Status |
 |---|---|---|---|
 | Add Blog Slug | 👤 UX | 🟧 Medium | 🟨 WIP |
-| Add More Animation | ✨ Looks | 🟩 High | 🟧 Half Implemented |
+| Add More Animation | ✨ Looks | 🟩 High | 🟧 Half Implemented |`
 | Add Users Dashboard | 👤 UX | 🟧 Medium | 🟧 Half Implemented |
 | Add Google Auth | 👤 UX | 🟧 Medium | 🟥 HALT |
 | Add Blog Comment | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
