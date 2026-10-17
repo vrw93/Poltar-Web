@@ -12,6 +12,12 @@ $datas = [
         'title' => 'Akses Ditolak',
         'description' => 'Silahkan Kembali Ke Halaman Utama'
     ],
+    'under_development' => [
+        'title' => '<i class="fa-solid fa-person-digging"></i> 
+            Sedang Dalam Perbaikan 
+            <i class="fa-solid fa-screwdriver-wrench"></i>',
+        'description' => 'Silahkan Tunggu Hingga Perbaikan Selesai'
+    ],
 
     //Http Error
     '404' => [
@@ -31,8 +37,10 @@ $datas = [
         'description' => 'Terlalu Banyak Request<br>Silahkan cek ulang tautan anda atau kembali ke halaman utama'
     ],
     '500' => [
-        'title' => '500',
-        'description' => 'Kesalahan Internal<br>Silahkan cek ulang tautan anda atau kembali ke halaman utama'
+        'title' => '<i class="fa-solid fa-server"></i>
+            Kesalahan Internal
+            <i class="fa-solid fa-bug"></i>',
+        'description' => 'Silahkan cek ulang tautan anda atau kembali ke halaman utama'
     ],
     '502' => [
         'title' => '502',

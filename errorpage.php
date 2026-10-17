@@ -30,15 +30,18 @@ if(isset($datas[$httpCode])){
         <h1 style="text-align: center;">Polisi Taruna</h1>
         <h2 style="color: var(--accent-gold);text-align: center;">SMK Negeri 1 Giritontro</h2>
 
-        <?php include "components/navbar.php"; ?>
+        <?php include __DIR__ . "/components/navbar.php"; ?>
 
         <div style="display:flex; flex-direction:column; align-items:center; text-align: center;">
             <h2 style="margin-top: 50px"><?=$data['title']?></h2>
             <p><?=$data['description']?></p>
-            <a href='/' class='primary-btn' style="max-width:fit-content">Kembali Ke Halaman Utama</a>
+            <a href='/' class='primary-btn' style="max-width:fit-content">
+                <i class="fa-solid fa-house"></i>
+                Kembali Ke Halaman Utama
+            </a>
         </div>
 
-        <?php include "components/footer.php"; ?>
+        <?php include __DIR__ . "/components/footer.php"; ?>
         <script src="https://kit.fontawesome.com/c2c5e95263.js" crossorigin="anonymous"></script>
     </body>
 </html>
