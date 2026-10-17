@@ -112,7 +112,7 @@ $title = "Poltar Web";
             <p style="text-align: center;">Informasi Terbaru Terkait Polisi Taruna Kenshiro</p>
             <div class="blogPost">
                 <?php foreach ($blogPosts as $blogPost): ?>
-                    <?php include "components/blogCard.php"; ?>
+                    <?php include __DIR__ . "/components/blogCard.php"; ?>
                 <?php endforeach; ?>
 
                 <a class="blogContainer" href="blogs" style="

@@ -1,21 +1,18 @@
 <?php
 $currentPage = "";
-include "logic/database.php";
-include "logic/Blogs/getBlogPosts.php";
-include "logic/markdown/markdownParser.php";
-include "data/menudb.php";
+require_once __DIR__ . "/logic/database.php";
+require_once __DIR__ . "/logic/Blogs/getBlogManager.php";
+require_once __DIR__ . "/logic/markdown/markdownParser.php";
+require_once __DIR__ . "/data/menudb.php";
 
-$blogPosts = getBlogPosts($database);
+# Old System Use For Fallback Only!!!
+#$id = intval($_GET['id']);
 
-$id = intval($_GET['id']);
-$currentPost = null;
+# Clasess
+$getBlogMgr = new getBlogManager($database);
 
-foreach ($blogPosts as $post){
-    if ($post['id'] == $id){
-        $currentPost = $post;
-        break;
-    }
-}
+$slug = $_GET['slug'] ?? '';
+$currentPost = $getBlogMgr->getBlogDataBySlug($slug);
 
 if ($currentPost == null){
     $type = '404';
@@ -38,10 +35,10 @@ $title = $currentPost['title'] . " | Blog";
         
         <?php include __DIR__ . "/components/opengraph.php"?>
 
-        <link rel="stylesheet" href="static/css/mainStyle.css">
-        <link rel="stylesheet" href="static/css/markdown.css">
-        <link rel="stylesheet" href="static/css/blogPost.css">
-        <link rel="stylesheet" href="static/css/theme.css">
+        <link rel="stylesheet" href="/static/css/mainStyle.css">
+        <link rel="stylesheet" href="/static/css/markdown.css">
+        <link rel="stylesheet" href="/static/css/blogPost.css">
+        <link rel="stylesheet" href="/static/css/theme.css">
         <link rel="icon" type="image/x-icon" href="/static/image/poltarFav.ico">
         <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
     </head>

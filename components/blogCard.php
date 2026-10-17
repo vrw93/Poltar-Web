@@ -1,4 +1,4 @@
-<a href="/Post?id=<?= $blogPost['id'] ?>" class="blogContainer">
+<a href="/post/<?= $blogPost['slug'] ?>" class="blogContainer">
 
     <?php if ($blogPost['image'] !== ""): ?>
 

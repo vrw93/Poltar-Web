@@ -5,14 +5,15 @@ include __DIR__ . '/../authHelper.php';
 
 $currentPage = "";
 
-include "../../logic/Blogs/createBlogPost.php";
-include "../../logic/database.php";
-include "../../data/adminmenudb.php";
-include "../../logic/uploadImage.php";
+require_once __DIR__ . "/../../logic/database.php";
+require_once __DIR__ . "/../../data/adminmenudb.php";
+require_once __DIR__ . "/../../logic/uploadImage.php";
+require_once __DIR__ . "/../../logic/Blogs/blogManager.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include __DIR__ . '/../authHelper.php';
 
+    $isNewImage = false;
     if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK){
         if (!is_uploaded_file($_FILES['image']['tmp_name'])){
             die("File Invalid");
@@ -20,17 +21,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         
         $imagePath = uploadFile($_FILES['image'], "blog");
+        $isNewImage = true;
     }else {
         $imagePath = "";
     }
 
-    createBlogPost(
-        $database,
+    #clasess
+    $blogMgr = new blogManager($database);
+
+    if(!$blogMgr->createBlog(
         $_POST['title'],
         $imagePath,
         $_POST['description'],
         $_POST['content']
-    );
+    )){
+        if($isNewImage) delImage($imagePath, 'blog');
+
+        $type = '500';
+        include __DIR__ . '/../../errorpage.php';
+        exit;
+    }
 
     header("Location: /admin/blog");
     exit();
@@ -57,9 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </h2>
         <?php include __DIR__ . "/../../components/navbar.php"?>
 
-        <?php include "../components/blogForm.php" ?>
+        <?php include __DIR__ . "/../components/blogForm.php" ?>
 
-        <?php include "../../components/footer.php"; ?>
+        <?php include __DIR__ . "/../../components/footer.php"; ?>
 
         <script src="https://kit.fontawesome.com/c2c5e95263.js" crossorigin="anonymous"></script>
     </body>

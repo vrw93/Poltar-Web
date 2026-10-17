@@ -40,7 +40,7 @@ $title = "Blog | Poltar Web";
 
         <div class="blogPostList" id="blogListPage">
             <?php foreach ($blogPosts as $blogPost): ?>
-                <?php include "components/blogCard.php"; ?>
+                <?php include __DIR__ . "/components/blogCard.php"; ?>
             <?php endforeach; ?>
         </div>
         <?php
