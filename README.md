@@ -41,20 +41,20 @@ A web platform for Poltar Kenshiro, featuring member registration, a blog, and a
 
 | Task | Type | Priority | Status |
 |---|---|---|---|
-| Add Blog Slug | 👤 UX | 🟧 Medium | 🟨 WIP |
-| Add More Animation | ✨ Looks | 🟩 High | 🟧 Half Implemented |`
+| Add Site Setting | 💾 System | 🟧 Medium | 🟨 WIP |
+| Add More Animation | ✨ Looks | 🟩 High | 🟧 Half Implemented |
 | Add Users Dashboard | 👤 UX | 🟧 Medium | 🟧 Half Implemented |
 | Add Google Auth | 👤 UX | 🟧 Medium | 🟥 HALT |
 | Add Blog Comment | 👤 UX | 🟧 Medium | ⬛ Not Implemented |
 | Add Website Sitemap | 💾 System | 🟧 Medium | ⬛ Not Implemented |
 | Add Blog Author And View Count | 💾 System | 🟧 Medium | ⬛ Not Implemented |
 | Add Password Complexity Check | 🔑 Security | 🟧 Medium | ⬛ Not Implemented |
-| Add Site Setting | 💾 System | 🟧 Medium | ⬛ Not Implemented |
 
 ### ✅ | Completed
 
 | Task | Type | Priority | Status |
 |---|---|---|---|
+| Add Blog Slug | 👤 UX | 🟧 Medium | 🟩 Implemented |
 | Add Theme | ✨ Looks | 🟧 Medium | 🟩 Implemented |
 | Add Reqruitement Dashboard | 👤 UX | 🟧 Medium | 🟩 Implemented |
 | Add Quota Editor | 💾 System | 🟩 High | 🟩 Implemented |
