@@ -1,7 +1,7 @@
 <form method="post" class="formContainer" enctype="multipart/form-data">
     <div class="HContainer" style="padding:50px;">
         <div class="itemPanel" style="flex-grow: 3; flex-shrink:2; min-width:320px">
-            <p>Editing <?=htmlspecialchars($blogPost['title']) ?? 'New Post' ?></p>
+            <p>Editing <?=htmlspecialchars($blogPost['title'] ?? 'New Post') ?></p>
             <textarea name="content" placeholder="Content" required><?=$blogPost['content'] ?? '' ?></textarea>
         </div>
         <div class="itemPanel" style="max-width: 400px; min-width: 320px">
