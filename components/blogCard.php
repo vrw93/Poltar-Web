@@ -6,10 +6,10 @@
 
     <?php endif; ?>
     
-    <h2><?= $blogPost['title'] ?></h2>
-    <small><?= $blogPost['createdAt'] ?></small>
+    <h2><?= htmlspecialchars($blogPost['title']) ?></h2>
+    <small><?= htmlspecialchars($blogPost['createdAt']) ?></small>
     <p>
-        <?= $blogPost['description'] ?>
+        <?= htmlspecialchars($blogPost['description']) ?>
         <br>
         <small style="margin: 0px">Baca Selengkapnya</small>
     </p>

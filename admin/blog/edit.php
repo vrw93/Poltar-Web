@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     <body>
         <h1 style="text-align: center;">EDIT BLOG POST</h1>
         <h2 style="color: var(--accent-gold);text-align: center;">
-            <?= $blogPost['title'] ?>
+            <?= htmlspecialchars($blogPost['title']) ?>
         </h2>
 
         <?php include __DIR__ . "/../../components/navbar.php"; ?>

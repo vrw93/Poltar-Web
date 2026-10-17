@@ -24,6 +24,9 @@ session_start();
 $mardownParser = new markdownParser();
 
 $content = $mardownParser->Parse($currentPost['content']);
+
+$currentPost['title'] = htmlspecialchars($currentPost['title']);
+
 $titleNonOg = $currentPost['title'];
 $title = $currentPost['title'] . " | Blog";
 ?>
