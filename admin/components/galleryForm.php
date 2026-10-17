@@ -1,7 +1,7 @@
 <form method="post" class="formContainer" enctype="multipart/form-data">
     <div class="HContainer" style="padding:50px">
         <div class="itemPanel" style="flex-grow: 3; flex-shrink:2;min-width:320px">
-            <p>Editing <?=$galleryPost['title'] ?? 'New Post' ?></p>
+            <p>Editing <?=htmlspecialchars($galleryPost['title'] ?? 'New Post') ?></p>
             <textarea name="description" placeholder="Description" required><?=$galleryPost['description'] ?? '' ?></textarea>
             <small>*Note Markdown Is Not Supported</small>
         </div>
