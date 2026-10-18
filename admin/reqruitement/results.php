@@ -85,6 +85,18 @@ echo('</pre>');*/
                         </tr>
                     </thead>
                     <tbody>
+                        <?php if(count($acceptedPendaftar) === 0): ?>
+                        <tr>
+                            <td colspan="7" style="text-align: center">
+                                <i class="fa-solid fa-folder-open fa-2xl"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="7" style="text-align: center">
+                                Belum Ada User Yang Mendaftar/Diverifikasi
+                            </td>
+                        </tr>
+                        <?php endif;?>
                         <?php
                             $index = 1;
                             foreach($acceptedPendaftar as $data): 
