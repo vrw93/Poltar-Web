@@ -134,7 +134,7 @@ $uDCount = $getDbData->getGeneralCount($database, 'pendaftaran', 'unverified');
                     <th style="width: 50px"></th>
                 </thead>
                 <tbody>
-                    <?php if(count($verifiedData) === 0): ?>
+                    <?php if(count($verifiedData['pendaftarData']) === 0): ?>
                     <tr>
                         <td colspan="7" style="text-align: center">
                             <i class="fa-solid fa-folder-open fa-2xl"></i>
